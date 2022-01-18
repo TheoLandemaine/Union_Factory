@@ -1,34 +1,29 @@
-// import React from 'react';
-// import "../css/Categories.css";
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-// const Animalier = () => (
-//     <>
-//         <div className="nomPage">
-//             <h1 id="AnimalierTitrePage">Animalier </h1>
-//         </div>
-
-//     </>
-// )
-    
-// export default Animalier;
-
-import React from "react";
 import "../css/cards.css";
-import CardsGen from "./CardsGen";
-import SearchBar from "./SearchBar"
+import "../css/Categories.css";
+
+import Cards from "./Cards";
+import React from "react";
+import asso  from './Assos';
 
 
 const Animalier = ({ cards }) => (
     <div >
-        <div>
+         <div className="nomPage">
+             <h1 id="AnimalierTitrePage">Animalier</h1>
         </div>
-        <div className="cards-container">
-        <SearchBar />
-            {cards.map((card) => (
-        <CardsGen card={card} />
-        ))}
+
+        <div className="cardCategories">
+            <BrowserRouter>
+            <Switch>
+                <Route
+                path="/:filter?"
+                render={(props) => <Cards {...props} cards={asso} />}
+                />
+            </Switch>
+            </BrowserRouter>
         </div>
-        
     </div>
 );
 

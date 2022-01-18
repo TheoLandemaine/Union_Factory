@@ -6,6 +6,7 @@ import imgJungle from "../images/fondJungleApp.webp"
 let asso = [
   {
     id: "1",
+    className: "categoriesEnvironnement",
     img: imgOcean,
     title: "Bloom",
     text: "Description assez nul pour dire que c'est une association qui protège les mers et les océans je crois car j'ai recherché sur internet",
@@ -13,14 +14,16 @@ let asso = [
   },
   {
     id: "2",
-    img: imgDesert,
+    className: "categoriesHumanitaire",
+    img: imgJungle,
     title: "Générations futures",
     text: "Description assez nul pour dire que c'est une association qui protège la nature, les forêts etc je crois car j'ai recherché sur internet",
     link: "https://www.generations-futures.fr/"
   },
   {
     id: "3",
-    img: imgJungle,
+    className: "categoriesAnimalier",
+    img: imgDesert,
     title: "Enfant du Désert",
     text: "Description assez nul pour dire que c'est une association qui aide à construire des écoles dans le désert marocain pour offrir une éducations aux enfants",
     link: "https://enfantsdudesert.org",
