@@ -3,8 +3,10 @@ import "../css/contact.css";
 
 const Contact = () => (
     <>
+        <h1>Contact </h1>
+
         <div className="contact-container">
-            <h1>Contact </h1>
+
             <div className="information-container">
                 <p><span className="titre-contact">Civilité :</span>
                     <input type="checkbox" id="masculin"/> Masculin
@@ -16,6 +18,10 @@ const Contact = () => (
                 <p><span className="titre-contact">E-mail :</span>  <input type="email" placeholder="Entrer votre E-mail" required/>    </p>
                 <p><span className="titre-contact">Pays :</span>        </p>
             </div>
+            <div className="msg-container">
+                <p><span className="titre-contact sujet">Sujet :</span> <input type="text" placeholder="Entrer votre sujet" required/> </p>
+                <p className="msg-message"><span className="titre-contact">Message :</span> <input type="text" placeholder="Entrer votre message" id="msg-message" required/> </p>
+            </div>
         </div>
     </>
 )
@@ -23,3 +29,8 @@ const Contact = () => (
 
 
 export default Contact;
+
+
+// document.getElementById("masculin").addEventListener("click", () => {
+//     console.log('test')
+// })
