@@ -8,7 +8,7 @@ import React from "react";
 import asso  from './Assos';
 
 
-const Animalier = ({ cards }) => (
+const Animalier = () => (
     <div >
          <div className="nomPage">
              <h1 id="AnimalierTitrePage">Animalier</h1>
@@ -28,3 +28,13 @@ const Animalier = ({ cards }) => (
 );
 
 export default Animalier;
+
+window.addEventListener("DOMContentLoaded", function() {
+    // do stuff
+
+    let card = document.querySelector(".Humanitaire").parentNode.parentNode
+    console.log(card)
+    card.style.display = "none"
+    // console.log(document.querySelector(".Humanitaire").parentNode.parentNode)
+
+}, false);
