@@ -3,6 +3,8 @@ import imgEnvironnement from "../images/fondEnvironnementApp.jpeg";
 import imgHumanitaire from "../images/fondHumanitaireApp.png"
 import imgAnimalier from "../images/fondAnimalApp.jpeg"
 import "../css/Categories.css";
+import {Link} from 'react-router-dom'
+
 
 //JS de Rui pour les Cards 
 
@@ -15,17 +17,23 @@ const Categories = () => (
         <div id="CategorieContainer">
 
             <div id="Environnement" className="image">
-                <img src={imgEnvironnement} id="EnvironnementImage"></img>
+                <Link to="/environnement">
+                    <img src={imgEnvironnement} id="EnvironnementImage"></img>
+                </Link>
                 <h2 id="EnvironnementTitre">Environnement</h2>
             </div>
 
             <div id="Humanitaire" className="image">
-                <img src={imgHumanitaire} id="HumanitaireImage"></img>
+                <Link to="/humanitaire">
+                    <img src={imgHumanitaire} id="HumanitaireImage"></img>
+                </Link>
                 <h2 id="HumanitaireTitre">Humanitaire</h2>
             </div>
 
             <div id="Animalier" className="image">
-                <img src={imgAnimalier} id="AnimalierImage"></img>
+                <Link to="/animalier">
+                    <img src={imgAnimalier} id="AnimalierImage"></img>
+                </Link>
                 <h2 id="AnimalierTitre">Animalier</h2>
             </div>
 
