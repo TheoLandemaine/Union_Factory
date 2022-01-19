@@ -9,7 +9,7 @@ class CardsGen extends React.Component {
         </div>
         <div className="card-text">
           <span className="association">{this.props.card.title}</span>
-          <p>{this.props.card.text}</p>
+          <p className={this.props.card.categorie}>{this.props.card.text}</p>
           <a className="inc button" href={this.props.card.link} target="_blank" rel="noreferrer">
             Cliquez pour visiter
           </a>
