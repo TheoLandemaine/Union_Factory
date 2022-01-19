@@ -10,7 +10,8 @@ let asso = [
     img: imgOcean,
     title: "Bloom",
     text: "Description assez nul pour dire que c'est une association qui protège les mers et les océans je crois car j'ai recherché sur internet",
-    link: "https://bloomassociation.org/"
+    link: "https://bloomassociation.org/",
+    categorie: "Environnement"
   },
   {
     id: "2",
@@ -18,7 +19,8 @@ let asso = [
     img: imgJungle,
     title: "Générations futures",
     text: "Description assez nul pour dire que c'est une association qui protège la nature, les forêts etc je crois car j'ai recherché sur internet",
-    link: "https://www.generations-futures.fr/"
+    link: "https://www.generations-futures.fr/",
+    categorie: "Humanitaire"
   },
   {
     id: "3",
@@ -27,6 +29,7 @@ let asso = [
     title: "Enfant du Désert",
     text: "Description assez nul pour dire que c'est une association qui aide à construire des écoles dans le désert marocain pour offrir une éducations aux enfants",
     link: "https://enfantsdudesert.org",
+    categorie: "Animalier"
   },
 //   {
 //     id: "4",
