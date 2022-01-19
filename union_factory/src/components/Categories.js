@@ -18,21 +18,21 @@ const Categories = () => (
 
             <div id="Environnement" className="image">
                 <Link to="/environnement">
-                    <img src={imgEnvironnement} id="EnvironnementImage"></img>
+                    <img src={imgEnvironnement} id="EnvironnementImage" alt="Environnement"/>
                 </Link>
                 <h2 id="EnvironnementTitre">Environnement</h2>
             </div>
 
             <div id="Humanitaire" className="image">
                 <Link to="/humanitaire">
-                    <img src={imgHumanitaire} id="HumanitaireImage"></img>
+                    <img src={imgHumanitaire} id="HumanitaireImage" alt="Humanitaire"/>
                 </Link>
                 <h2 id="HumanitaireTitre">Humanitaire</h2>
             </div>
 
             <div id="Animalier" className="image">
                 <Link to="/animalier">
-                    <img src={imgAnimalier} id="AnimalierImage"></img>
+                    <img src={imgAnimalier} id="AnimalierImage" alt="Animalier"/>
                 </Link>
                 <h2 id="AnimalierTitre">Animalier</h2>
             </div>
