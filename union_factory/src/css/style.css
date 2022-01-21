@@ -92,6 +92,10 @@ PAGE DE CONNECTION
   transition: 0.5s ease;
 }
 
+#connect:hover {
+  transform: scale(1.15);
+}
+
 .cadre{
   display: flex;
   flex-direction: column;
@@ -149,6 +153,7 @@ input{
   font-size: 20px;
   padding: 10px;
   margin: 30px;
+  transition: 0.2s ease;
 }
 
 #BoutonIncription {
@@ -157,10 +162,22 @@ input{
   text-align: center;
   font-size: 15px;
   padding: 2px;
+  transition: 0.2s ease;
+  background: none;
+  border: none;
 }
 
 .DivIncription {
   margin: 10px;
+}
+
+#BoutonConnection:hover {
+  background-color: rgb(26, 118, 204);
+}
+
+#BoutonIncription:hover {
+  color: rgb(26, 118, 204);
+  text-decoration: underline;
 }
 
 
