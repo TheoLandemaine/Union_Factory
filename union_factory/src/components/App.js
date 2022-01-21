@@ -2,7 +2,9 @@ import React          from 'react';
 import Header         from './Header';
 import Cards          from './Cards';
 import Accueil        from './Accueil';
+
 import Search         from './Search';
+
 import Categories     from './Categories';
 import Favoris        from './Favoris';
 import Contact        from './Contact';
@@ -29,7 +31,7 @@ class App extends React.Component {
             <Switch>
               
               
-              <Route path="/search"      exact component={Search}>
+              <Route path="/search"        exact component={Search}>
                 <SearchBar />
                 <Route path="/:filter?" render={(props) => <Cards {...props} cards={asso} />}/>
               </Route>
