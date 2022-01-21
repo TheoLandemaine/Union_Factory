@@ -12,9 +12,16 @@ var pathname = window.location.pathname;
 
 // if (pathname ==="/animalier"){
     console.log('oui')
-    var card = document.querySelector(".Humanitaire").parentNode.parentNode
+    var card = document.querySelectorAll(".Humanitaire,.Environnement")
+        // .parentNode.parentNode
     console.log(card)
-    card.style.display = "none"
+    for (var i = 0; i < card.length; i++){
+        // console.log(card[i])
+        card[i].parentNode.parentNode.style.display ="none";
+    }
+
+
+    // card.style.display = "none"
 
 
 
