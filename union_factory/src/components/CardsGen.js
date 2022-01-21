@@ -5,12 +5,12 @@ class CardsGen extends React.Component {
     return (
       <div className="card">
         <div className="card-image">
-          <img src={this.props.card.img} alt="image" />
+          <img src={this.props.card.img} alt="association" />
         </div>
         <div className="card-text">
           <span className="association">{this.props.card.title}</span>
-          <p>{this.props.card.text}</p>
-          <a className="inc button" href={this.props.card.link} target="_blank">
+          <p className={this.props.card.categorie}>{this.props.card.text}</p>
+          <a className="inc button" href={this.props.card.link} target="_blank" rel="noreferrer">
             Cliquez pour visiter
           </a>
         </div>

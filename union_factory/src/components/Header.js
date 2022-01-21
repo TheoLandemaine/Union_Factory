@@ -24,7 +24,7 @@ const Header = () => (
                 <nav>
                     <div className="navbar-container">
                         <div className="categories">
-                            <ul class="Separation">
+                            <ul className="Separation">
                                 <Link to="/search">
                                     <li> Recherche</li>
                                 </Link>
@@ -46,7 +46,7 @@ const Header = () => (
                 </nav>
                 <div className="profil-pic">
                     <figure>
-                        <ion-icon className="login-logo" name="person-circle"></ion-icon>
+                        <ion-icon className="login-logo" name="person-circle"/>
                     </figure>
                 </div>
             </div>
