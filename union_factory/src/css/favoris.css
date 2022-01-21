@@ -1,0 +1,21 @@
+.nomPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Favoris {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-top: 50px;
+    text-align: center;
+    text-justify: center;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+#Favoris:hover {
+    transform: scale(1.15);
+}

@@ -1,10 +1,12 @@
 import React from 'react';
+import "../css/favoris.css";
 
-//JS de Rui pour les Cards 
 
 const Favoris = () => (
     <>
-        <h1>Favoris </h1>
+        <div className="nomPage">
+            <h1 id="Favoris">Favoris </h1>
+        </div>
 
     </>
 )

@@ -4,7 +4,7 @@ import "../css/contact.css";
 const Contact = () => (
     <>
         <div className="h1-contact">
-            <h1>Pour nous contacter </h1>
+            <h1 id="Contacter">Pour nous contacter </h1>
         </div>
 
         <form action="action.html">
@@ -16,12 +16,12 @@ const Contact = () => (
                         <input type="checkbox" id="feminin"/> Feminin
                     </p>
 
-                    <p><span className="titre-contact">Nom :</span> <input type="text" placeholder="Entrer votre nom" required/>   </p>
-                    <p><span className="titre-contact">Adresse :</span> <input type="text" placeholder="Entrer votre adresse" required/>    </p>
-                    <p><span className="titre-contact">E-mail :</span>  <input type="email" placeholder="Entrer votre E-mail" required/>    </p>
+                    <p id="inputNom" ><span className="titre-contact">Nom :</span> <input type="text" placeholder="Entrer votre nom" required/>   </p>
+                    <p id="inputAdresse" ><span className="titre-contact">Adresse :</span> <input type="text" placeholder="Entrer votre adresse" required/>    </p>
+                    <p id="inputEmail" ><span className="titre-contact">E-mail :</span>  <input type="email" placeholder="Entrer votre E-mail" required/>    </p>
 
                     <div className="dropdown-list" >
-                        <p><span className="titre-contact">Pays :</span>   </p>
+                        <p id="inputCountry"><span className="titre-contact">Pays :</span>   </p>
 
                         <div className="bloc">
                             <div className="select">
@@ -38,8 +38,8 @@ const Contact = () => (
 
                 </div>
                 <div className="msg-container">
-                    <p><span className="titre-contact sujet">Sujet :</span> <input type="text" placeholder="Entrer votre sujet" required/> </p>
-                    <p className="msg-message"><span className="titre-contact">Message :</span> <input type="text" placeholder="Entrer votre message" id="msg-message" required/> </p>
+                    <p id="inputSujet"><span className="titre-contact sujet">Sujet :</span> <input type="text" placeholder="Entrer votre sujet" required/> </p>
+                    <p className="msg-message"><span className="titre-contact">Message :</span> <textarea type="text" placeholder="Entrer votre message" id="msg-message" required/> </p>
                 </div>
             </div>
             <input type="submit" value="Valider"/>

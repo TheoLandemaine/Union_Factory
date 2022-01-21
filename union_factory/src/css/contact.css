@@ -4,7 +4,23 @@
     justify-content: center;
     margin: 20px 0 40px 0;
     padding:10px 0;
-    background: rgba(255, 255, 255, .8);
+    /* background: rgba(255, 255, 255, .8); */
+}
+
+#Contacter {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    margin-top: 20px;
+    text-align: center;
+    text-justify: center;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+#Contacter:hover {
+    transform: scale(1.15);
 }
 
 .contact-container{
@@ -13,12 +29,13 @@
     text-align: center;
     width:100%;
     align-items: center;
+    margin-top: -20px;
 }
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 50px;
     border-radius:20px;
     background: rgba(255, 255, 255, .8);
 }
@@ -59,7 +76,7 @@ form{
 p{
     margin:30px 0;
 }
-input{
+input, textarea{
     margin:0 5px;
     border-radius:10px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -67,17 +84,23 @@ input{
 }
 
 input[type="text"], input[type="email"]{
-    padding-left: 5px;
+    padding: 10px;
     height:30px;
+    width: 200px;
+    text-align: left;
 }
 
 input[type="submit"]{
     width:200px;
     height:50px;
-    margin-bottom:10px ;
+    margin-bottom:20px;
+    margin-top: -20px;
 }
+
 #msg-message{
-    height:150px;
+    height:200px;
+    width: 300px;
+    padding: 10px;
 }
 
 
@@ -86,6 +109,27 @@ input[type="submit"]{
     margin-right: 5px;
 }
 
+#inputNom {
+    margin-left: 45px;
+}
+
+#inputAdresse {
+    margin-left: 5px;
+}
+
+#inputEmail {
+    margin-left: 20px;
+}
+
+#inputCountry {
+    margin-left: 40px;
+}
+
+#inputSujet {
+    margin-right: 60px;
+}
+
+
 /*****************************************/
 /*            Dropdown list              */
 /*****************************************/
@@ -93,6 +137,7 @@ input[type="submit"]{
 .bloc{
     display: flex;
     align-items:center;
+    margin-left: 10px;
 }
 
 /*Réinitilaisation de la liste déroulante*/
