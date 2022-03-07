@@ -37,7 +37,7 @@
 
 }
 
-#Categories:hover {
+#Categories:hover, #EnvironnementTitrePage:hover, #HumanitaireTitrePage:hover, #AnimalierTitrePage:hover {
     transform: scale(1.15);
 }
 

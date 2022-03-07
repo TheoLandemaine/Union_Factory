@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaUserCircle, FaFoursquare} from 'react-icons/fa'
+import { GiEarthAmerica } from "react-icons/gi";
 import {Link} from 'react-router-dom'
 
 const Header = () => (
@@ -10,7 +11,8 @@ const Header = () => (
                 <div className="logo">
                     <figure>
                         <Link to="/" style={{textDecoration: 'none'}}>
-                            <li className="title" ><FaFoursquare /></li>
+                            {/* <li className="title" ><FaFoursquare /></li> */}
+                            <li className="title" ><GiEarthAmerica /></li>
                         </Link>
                     </figure>
                 </div>
