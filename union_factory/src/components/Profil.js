@@ -4,100 +4,44 @@ import {FaUserCircle} from 'react-icons/fa'
 const Profil = () => (
     <>
         <div className="profilBody">
-            <div className="titre">
-                <h1>Connectez-vous</h1>
-                
+            <div className="nomPage">
+                <h1 id="connect">Connectez-vous</h1>     
             </div>
            
             <section className="container">
                 <div className="cadre">
-                <div>
-                    <FaUserCircle id="ConnectionLogo"/>
-                </div>
+                    <div>
+                        <FaUserCircle id="ConnectionLogo"/>
+                    </div>
 
-                <div className='mail'>
+                    <div className='mail'>
                   
-                  <div>
-                      <h2>Adresse-mail:</h2>
-                      <input type='text' placeholder="entrer votre E-mail" required/>
+                        <div>
+                            <h2 id="TitreAdresseMail">Adresse-mail:</h2>
+                            <input type='text' placeholder="Entrer votre E-mail" id="InputAdresseMail" required/>
+                        </div>
 
-                 
-
-                  </div>
-                  <div className='mdp'>
-                      <h2>Mot de passe:</h2>
-                      <input type='text' placeholder="entrer votre mot de passe" required/>
-                 
-                    
-                  </div>
-
-
-
-                  <div>
-
-                  <input type='checkbox' name="mdp"></input> 
-                  <label for="mdp">Mémoriser mot de passe </label>
-
-                  <input class="login"
-                         type="button"
-                         value="Se connecter"/>
-                           <label for="sign-up">Vous n'avez pas de compte ? </label>
-
-
-                 <input class="sign-up"
-                 
-                 
-                            type="button"
-                            value="S'inscire ici"/>
+                        <div className='mdp'>
+                            <h2 id="TitreMotDePasse"> Mot de passe:</h2>
+                            <input type='text' placeholder="Entrer votre mot de passe" id="InputMotDePasse" required/>
                             
-                          
+                        </div>
 
-                              
+                        <div className="DivCheckbox">
+                            <input type='checkbox' name="mdp" id="CheckMotDePasse"></input>
+                            <label for="mdp">Mémoriser mot de passe </label> 
+                        </div>
 
-                            
-                          
+                        <input type="button" value="Se connecter" id="BoutonConnection"/>
 
-
-
-
-
-
-
-
-                        
-
-
-
-
-
-
-                  
-                   </div>
-                 
-
-                
-                 
-                       
-                  
-        
-
-               
-
-                 
-                 
-              </div>
+                        <div className='DivIncription'> 
+                            <label for="sign-up">Vous n'avez pas de compte ? </label>
+                            <input id="BoutonIncription" type="button" value="S'inscire ici"/>
+                        </div>
+                    </div>
                 </div>
-
-               
-            
             </section>
-           
-             
-
-
         </div>
-
-
     </>
 )
     
