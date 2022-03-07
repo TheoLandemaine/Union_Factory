@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@300&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap');
 
 * {
   margin: 0;
@@ -6,9 +7,13 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 html, body, .background-component {
   height: 100%;
-  background: url(../images/ocean.jpeg)no-repeat center center fixed;
+  background: url(../images/essaieFond2.jpeg)no-repeat center fixed;
   background-size: cover;
 }
 
@@ -17,13 +22,20 @@ html, body, .background-component {
   background-size: cover;
 } */
 
+p, h1, h2, h3, h4, button {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 .header-container {
   display: flex;
-  font-family: "Lobster", "cursive";
+  /* font-family: "Lobster", "cursive"; */
+  font-family: 'Josefin Sans', sans-serif;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   font-size: 24px;
+  background-color: rgba(255, 255, 255, .0);
+  
 }
 
 .title{
@@ -41,26 +53,27 @@ PAGE D'ACCUEIL
 .PhraseAccueil{
   text-align: center;  
   position: relative;
+  justify-content: center;
   display: flex;
   font-size: 25px;
-  top : 220px;
-  left : 100px;
+  top : 150px;
 }
 
 #bouton{
   font-size: 30px;
   border-radius: 15px;
   position: relative;
-  top : 270px;
-  left : 200px;
-  background-color: rgb(230, 230, 230);
+  top : 360px;
+  left : 625px;
+  background-color: #5cc8f9;
   padding: 7px;
   transition: all .3s;
+  border: none;
 }
 
 #bouton:hover {
-  box-shadow: 3px 3px 3px grey;
   transform: scale(1.1);
+  background-color: #79d0f8;
 }
     
 #bouton:active {
@@ -90,6 +103,8 @@ PAGE DE CONNECTION
   background-color: rgba(255, 255, 255, .8);
   border-radius: 20px;
   transition: 0.5s ease;
+  padding: 7px;
+
 }
 
 #connect:hover {
