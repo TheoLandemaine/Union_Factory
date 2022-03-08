@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+
 /* CARDS */
 .cards-container {
   display: flex;
@@ -14,7 +19,7 @@
   font-family: "Heebo", sans-serif;
   flex-wrap: wrap;
   width: 1200px;
-  margin-left: 130px;
+  /*margin-left: 130px;*/
 }
 
 .card {

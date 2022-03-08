@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import useScript from "../javaScript/UseScript";
 
 
 // function Search() {
@@ -40,9 +41,10 @@ import { useState } from "react";
 
 
 const SearchBar = () =>{
+    useScript('./assets/js/searchBarScript.js');
     return(
         <>
-            <div className="searchBar">
+            <div className="searchBar" id="barSearch">
                 <input type="text" name="searchBar" id="searchBar" placeholder="Rechercher" ></input> 
             </div>
         </>

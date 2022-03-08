@@ -262,14 +262,17 @@ HEADER
   cursor: pointer;
 }
 
+#barSearch{
+  display: flex;
+  justify-content: center;
+}
+
 #searchBar{
-  position: relative;
   margin: 50px;
   width: 700px;
   height: 30px;
   border-radius: 20px;
   padding: 0.9em;
-  right: -300px;
 }
 
 #fa{
