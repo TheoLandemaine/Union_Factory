@@ -11,8 +11,6 @@ html {
   overflow-x: hidden;
 }
 
-
-
 html, body, .background-component {
   height: 100%;
   background: url(../images/fondSite.jpeg)no-repeat center fixed;
