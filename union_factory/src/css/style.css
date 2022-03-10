@@ -12,12 +12,14 @@ html {
 }
 
 html, body, .background-component {
-  height: 100%;
+  height: auto;
   background: url(../images/fondSite.jpeg)no-repeat center fixed;
   background-size: cover;
-  background-color: #2a98f9;
+  /* background-color: #2a98f9; */
+  background-color: #000;
 }
 
+  
 /* .background-component {
   background: url(../images/ocean.jpeg)no-repeat center center fixed;
   background-size: cover;
@@ -53,19 +55,20 @@ PAGE D'ACCUEIL
 
 .PhraseAccueil{
   text-align: center;  
-  position: relative;
+  position: absolute;
   justify-content: center;
   display: flex;
   font-size: 25px;
-  top : 150px;
+  top: 30%;
+  left: 36%;
 }
 
 #bouton{
   font-size: 30px;
   border-radius: 15px;
-  position: relative;
-  top : 360px;
-  left : 625px;
+  position: absolute;
+  top : 75%;
+  left : 43%;
   background-color: #5cc8f9;
   padding: 10px;
   transition: all .3s;
@@ -155,7 +158,6 @@ input{
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.1);
   background-color: white;
-  text-align: center;
 }
 
 #InputAdresseMail, #InputMotDePasse {
@@ -295,3 +297,79 @@ i {
   padding:9px 8px;
 }
 
+/* 
+---------------------------------------------------------------------------------------------------------------
+FOOTER 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+.container_footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row;
+  height: auto;
+}
+
+.text_footer {
+  font-size: 10px;
+  padding: 10px;
+}
+
+.LienFooter {
+  font-size: 20px;
+  list-style: none;
+}
+
+.LienFooter a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+À PROPOS DE NOUS 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+.cadre_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  border-radius:20px;
+  background: rgba(255, 255, 255, .9);
+  padding: 30px;
+}
+
+#proposTitre {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-top: 50px;
+  text-align: center;
+  text-justify: center;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  transition: 0.5s ease;
+  padding: 10px;
+}
+
+.textPresentation {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+@media only screen and (min-width: 600px) { /* Pour écran de moins de 600 pixels  */
+
+  
+  
+}
