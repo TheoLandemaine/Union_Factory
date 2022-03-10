@@ -6,9 +6,7 @@ const Cards = ({ cards }) => (
   <>
       <div className="container">
           <div className="cards-container">
-              {/*{cards.map((card) => ( <CardsGen card={card} /> ))}*/}
-              <CardsGen/>
-
+              {cards.map((card) => ( <CardsGen card={card} /> ))}
           </div>
       </div>
 

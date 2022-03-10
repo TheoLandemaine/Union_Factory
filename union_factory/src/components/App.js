@@ -3,6 +3,7 @@ import Header         from './Header';
 import Cards          from './Cards';
 import Accueil        from './Accueil';
 
+import Recherche      from './Recherche';
 import Search         from './Search';
 
 import Categories     from './Categories';
@@ -11,7 +12,7 @@ import Contact        from './Contact';
 import Profil         from './Profil';
 import Inscription    from './Inscription';
 import InfosCard      from './InfosCard';
-import asso           from './Assos';
+// import asso           from './Assos';
 import SearchBar      from './SearchBar';
 import Environnement  from './Environnement';
 import Humanitaire    from './Humanitaire';
@@ -21,7 +22,26 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false,
+    }
+  }
+  componentDidMount() {
+    fetch('http://localhost:3002/api/get')
+        .then(res => res.json())
+        .then(json => {
+          this.setState({
+            isLoaded: true,
+            items: json,
+          })
+        });
+  }
   render() {
+    var {items} = this.state;
     return (
       // html
       <>
@@ -29,11 +49,11 @@ class App extends React.Component {
           <BrowserRouter>
           <Header />
             <Switch>
-              
-              
+
+              <Route path="/recherche"    exact component={Recherche} />
               <Route path="/search"        exact component={Search}>
                 <SearchBar />
-                <Route path="/:filter?" render={(props) => <Cards {...props} cards={asso} />}/>
+                <Route path="/:filter?" render={(props) => <Cards {...props} cards={items} />}/>
               </Route>
               <Route path="/categories"    exact component={Categories} />
               <Route path="/favoris"       exact component={Favoris} />
