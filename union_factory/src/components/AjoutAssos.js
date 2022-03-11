@@ -2,8 +2,7 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import "../css/contact.css";
 import { BsPeopleFill } from "react-icons/bs";
-import { AiOutlineMail } from "react-icons/ai";
-import { MdFindInPage } from "react-icons/md";
+import { AiOutlineLink } from "react-icons/ai";
 
 
 export default function AjoutAssos() {
@@ -28,27 +27,33 @@ export default function AjoutAssos() {
                     <div>
                         <div className="rowNameEmail">
                             <div className="ensembleLogoInput">
-                                <input type="text" className="inputNameEmail" id="inputName" placeholder="Nom association" name="titre" required/>
-                                <div className="logoContact" id="logoNom">
+                                <input type="text" className="inputNameEmail" id="inputTitre" placeholder="Nom de votre association" name="titre" required/>
+                                <div className="logoContact" id="logoTitre">
                                     <BsPeopleFill />
                                 </div>
                             </div>
-                            <div className="ensembleLogoInput">
-                                <input type="email" className="inputNameEmail" id="inputEmail" placeholder="Email" name="email" required/>
-                                <div className="logoContact" id="logoEmail">
-                                    <AiOutlineMail />
+                            <div className="dropdown-list" >
+                                <div className="bloc">
+                                    <div className="select">
+                                        <select id="country" name="categorie" required>
+                                            <option value="unselected"> - Choisir une catégorie - </option>
+                                            <option value="environnement">Environnement</option>
+                                            <option value="humanitaire">Humanitaire</option>
+                                            <option value="animalier">Animalier</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     
                         <div className="ensembleLogoInput">
-                            <input type="text" className="titre-contact" id="inputSujet" placeholder="Lien de votre site" name="lien" required/>
-                            <div className="logoContact" id="logoSujet">
-                                <MdFindInPage />
+                            <input type="text" className="titre-contact" id="inputLien" placeholder="Lien de votre site" name="lien" required/>
+                            <div className="logoContact" id="logoLien">
+                                <AiOutlineLink />
                             </div>
                         </div>
                         <div className="msg-container">
-                            <textarea className="msg-message" id="" cols="30" rows="8" id="inputMessage" placeholder="Description" name="description" required></textarea>
+                            <textarea className="msg-message" id="" cols="30" rows="8" id="inputDescription" placeholder="Description" name="description" required></textarea>
                         </div>
                         <div className="btn-container">
                             <input type="submit" className="btnEnvoyer" value="Envoyez"></input>

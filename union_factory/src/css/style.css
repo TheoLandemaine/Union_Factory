@@ -367,6 +367,81 @@ FOOTER
   font-size: 20px;
 }
 
+/* 
+---------------------------------------------------------------------------------------------------------------
+AJOUT ASSOS 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+select {
+  width: 250px;
+  height: 35px;
+  padding: 5px 5px 5px 5px;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #FFF;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 20px;
+  text-align: center;
+  height: 40px;
+}
+
+#inputTitre {
+  margin-right: 50px;
+  margin-left: 0px;
+}
+
+
+#inputTitre, #inputLien, #inputDescription {
+  border-radius: 20px;
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+}
+
+#inputTitre, #inputLien {
+  padding-right: 3rem;
+}
+
+#inputLien, #inputDescription {
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#inputLien {
+  height: 40px;
+}
+
+
+.ensembleLogoInput {
+  display: flex;
+}
+
+#logoTitre {
+  top: 300px;
+  left: 736px;
+}
+
+#logoLien {
+  top: 380px;
+  left: 1036px;
+}
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+RESPONSIVE 
+---------------------------------------------------------------------------------------------------------------
+*/
 
 @media only screen and (min-width: 600px) { /* Pour écran de moins de 600 pixels  */
 
