@@ -274,6 +274,7 @@ footer Accueil.js {
   cursor: pointer;
 }
 
+
 .searchBar{
   display: flex;
   justify-content: center;
@@ -286,7 +287,6 @@ footer Accueil.js {
   border-radius: 20px;
   padding: 0.9em;
   padding-left: 45px;
-
 }
 
 #fa{
