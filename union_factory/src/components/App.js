@@ -16,6 +16,10 @@ import SearchBar      from './SearchBar';
 import Environnement  from './Environnement';
 import Humanitaire    from './Humanitaire';
 import Animalier      from './Animalier';
+import Footer         from './Footer';
+import Propos         from './Propos';
+import AjoutAssos     from './AjoutAssos';
+
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
@@ -46,6 +50,8 @@ class App extends React.Component {
               <Route path="/environnement" exact component={Environnement} />
               <Route path="/humanitaire"   exact component={Humanitaire} />
               <Route path="/animalier"     exact component={Animalier} />
+              <Route path="/propos"        exact component={Propos} />
+              <Route path="/ajoutassos"    exact component={AjoutAssos} />
               
             </Switch>
           </BrowserRouter>

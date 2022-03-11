@@ -1,5 +1,7 @@
 import React from 'react';
 import {FaUserCircle} from 'react-icons/fa'
+import Footer         from './Footer';
+
 
 const Profil = () => (
     <>
@@ -42,6 +44,8 @@ const Profil = () => (
                 </div>
             </section>
         </div>
+        <Footer />
+
     </>
 )
     

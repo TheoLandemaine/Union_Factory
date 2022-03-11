@@ -11,15 +11,15 @@ html {
   overflow-x: hidden;
 }
 
-
-
 html, body, .background-component {
-  height: 100%;
+  height: auto;
   background: url(../images/fondSite.jpeg)no-repeat center fixed;
   background-size: cover;
-  background-color: #2a98f9;
+  /* background-color: #2a98f9; */
+  background-color: #000;
 }
 
+  
 /* .background-component {
   background: url(../images/ocean.jpeg)no-repeat center center fixed;
   background-size: cover;
@@ -55,19 +55,20 @@ PAGE D'ACCUEIL
 
 .PhraseAccueil{
   text-align: center;  
-  position: relative;
+  position: absolute;
   justify-content: center;
   display: flex;
   font-size: 25px;
-  top : 150px;
+  top: 30%;
+  left: 36%;
 }
 
 #bouton{
   font-size: 30px;
   border-radius: 15px;
-  position: relative;
-  top : 360px;
-  left : 625px;
+  position: absolute;
+  top : 75%;
+  left : 43%;
   background-color: #5cc8f9;
   padding: 10px;
   transition: all .3s;
@@ -157,7 +158,6 @@ input{
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.1);
   background-color: white;
-  text-align: center;
 }
 
 #InputAdresseMail, #InputMotDePasse {
@@ -212,6 +212,10 @@ HEADER
 
 #profil{
   font-size: 30px;
+}
+
+footer Accueil.js {
+  background-color: red;
 }
 
 #logo{
@@ -270,17 +274,19 @@ HEADER
   cursor: pointer;
 }
 
-#barSearch{
+
+.searchBar{
   display: flex;
   justify-content: center;
 }
 
 #searchBar{
   margin: 50px;
-  width: 700px;
-  height: 30px;
+  width: 900px;
+  height: 50px;
   border-radius: 20px;
   padding: 0.9em;
+  padding-left: 45px;
 }
 
 #fa{
@@ -288,3 +294,165 @@ HEADER
   height: 2000px;
 }
 
+i {
+  position:absolute; 
+  left:280px; 
+  top:130px; 
+  padding:9px 8px;
+}
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+FOOTER 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+.container_footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row;
+  height: auto;
+}
+
+.text_footer {
+  font-size: 10px;
+  padding: 10px;
+}
+
+.LienFooter {
+  font-size: 15px;
+  list-style: none;
+  text-align: center;
+}
+
+.LienFooter a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.lien {
+  padding: 5px;
+}
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+À PROPOS DE NOUS 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+.cadre_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  border-radius:20px;
+  background: rgba(255, 255, 255, .9);
+  padding: 30px;
+}
+
+#proposTitre {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-top: 50px;
+  text-align: center;
+  text-justify: center;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  transition: 0.5s ease;
+  padding: 10px;
+}
+
+.textPresentation {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+AJOUT ASSOS 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+select {
+  width: 250px;
+  height: 35px;
+  padding: 5px 5px 5px 5px;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #FFF;
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 20px;
+  text-align: center;
+  height: 40px;
+}
+
+#inputTitre {
+  margin-right: 50px;
+  margin-left: 0px;
+}
+
+
+#inputTitre, #inputLien, #inputDescription {
+  border-radius: 20px;
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+}
+
+#inputTitre, #inputLien {
+  padding-right: 3rem;
+}
+
+#inputLien, #inputDescription {
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+#inputLien {
+  height: 40px;
+}
+
+
+.ensembleLogoInput {
+  display: flex;
+}
+
+#logoTitre {
+  top: 300px;
+  left: 736px;
+}
+
+#logoLien {
+  top: 380px;
+  left: 1036px;
+}
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------
+RESPONSIVE 
+---------------------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 600px) { /* Pour écran de moins de 600 pixels  */
+
+  
+  
+}
