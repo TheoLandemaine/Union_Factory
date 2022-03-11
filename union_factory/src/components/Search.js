@@ -1,8 +1,7 @@
 import React from "react";
 import "../css/cards.css";
-import CardsGen from "./CardsGen";
+import CardsGen  from "./CardsGen";
 import SearchBar from "./SearchBar";
-
 
 const Search = ({ cards }) => (
     <>

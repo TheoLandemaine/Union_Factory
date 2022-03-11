@@ -10,7 +10,10 @@ const Footer = () => (
             <div className="">
                 <ul className="LienFooter">
                     <Link to="/Propos">
-                        <li > À propos de nous</li>
+                        <li className="lien"> À propos de nous </li>
+                    </Link>
+                    <Link to="/AjoutAssos">
+                        <li className="lien"> Pour nous rejoindre </li>
                     </Link>
                 </ul>
                 {/* <h3 className="text_footer">À propos de nous </h3> */}

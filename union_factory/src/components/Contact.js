@@ -4,6 +4,8 @@ import "../css/contact.css";
 import { BsPeopleFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdFindInPage } from "react-icons/md";
+import Footer         from './Footer';
+
 
 
 export default function Contact() {
@@ -56,6 +58,8 @@ export default function Contact() {
                         </div>
                 </form>
             </div>
+            <Footer />
+
         </div>
     )
 

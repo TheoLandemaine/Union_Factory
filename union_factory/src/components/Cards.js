@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/cards.css";
 import CardsGen from "./CardsGen";
+import Footer    from './Footer';
+
 
 const Cards = ({ cards }) => (
   <>
@@ -10,6 +12,7 @@ const Cards = ({ cards }) => (
     {/* <div id="no_assos" class="hidden">
       Aucune association ne correspond à votre recherche
     </div> */}
+        <Footer />
 
   </>
 );

@@ -54,7 +54,6 @@ class App extends React.Component {
               <Route path="/ajoutassos"    exact component={AjoutAssos} />
               
             </Switch>
-          {/* <Footer /> */}
           </BrowserRouter>
 
         </div>

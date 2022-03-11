@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import "../css/contact.css";
 import { BsPeopleFill } from "react-icons/bs";
 import { AiOutlineLink } from "react-icons/ai";
+import Footer         from './Footer';
 
 
 export default function AjoutAssos() {
@@ -61,7 +62,10 @@ export default function AjoutAssos() {
                         </div>
                 </form>
             </div>
+            <Footer />
+
         </div>
+        
     )
 
 }

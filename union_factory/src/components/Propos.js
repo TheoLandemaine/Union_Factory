@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer         from './Footer';
+
 
 const Propos = () => (
     <>
@@ -30,6 +32,8 @@ const Propos = () => (
                 À bientôt !
             </h3>
         </div>
+        <Footer />
+
     </>
 )
     
