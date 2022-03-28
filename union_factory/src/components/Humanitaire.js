@@ -9,9 +9,21 @@ import asso  from './Assos';
 import useScript from "../javaScript/UseScript";
 
 
+class Humanitaire extends React.Component {
+// const Humanitaire = () => {
+//     useScript('./assets/js/humanitaireScript.js');
 
-const Humanitaire = () => {
-    useScript('./assets/js/humanitaireScript.js');
+    componentDidMount() {
+        console.log('c\'est monter')
+        var card = document.querySelectorAll(".Environnement,.Animalier")
+
+        console.log(card)
+
+        for (var i = 0; i < card.length; i++){
+            card[i].parentNode.parentNode.style.display ="none";
+        }
+    }
+    render(){
     return (
         <>
             <div className="nomPage">
@@ -29,7 +41,7 @@ const Humanitaire = () => {
             </div>
 
         </>
-    )
+    )}
 }
 
 export default Humanitaire;
