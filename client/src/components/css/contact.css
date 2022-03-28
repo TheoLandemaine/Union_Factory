@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap');
+
+
+.h1-contact{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px 0;
+    padding:10px 0;
+    /* background: rgba(255, 255, 255, .8); */
+}
+
+#Contacter {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    margin-top: 20px;
+    text-align: center;
+    text-justify: center;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 20px;
+    transition: 0.5s ease;
+    padding: 7px;
+}
+
+#Contacter:hover {
+    transform: scale(1.15);
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    align-items: center;
+    margin-top: -20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    border-radius:20px;
+    background: rgba(255, 255, 255, .8);
+}
+
+
+
+.rowNameEmail { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.inputNameEmail {
+  height: 40px;
+  width: 400px;
+}
+
+#inputName {
+    margin-right: 50px;
+    margin-left: 0px;
+}
+
+#inputEmail {
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+
+#inputName, #inputEmail, #inputSujet, #inputMessage, .btnEnvoyer {
+    border-radius: 20px;
+    text-align: left;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+}
+
+#inputName, #inputEmail, #inputSujet {
+    padding-right: 3rem;
+}
+
+#inputSujet, #inputMessage {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#inputSujet {
+    height: 40px;
+}
+
+.btnEnvoyer {
+    margin-left: 0;
+    cursor: pointer;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+} 
+
+.logoContact {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 33px;
+    padding: 2px;
+    z-index: 10;
+    border-radius: 2rem;
+    background-color: rgba(0,0,0,0.06);
+    transform: translate(-0.3rem,-50%);
+    display: flex;
+}
+
+.ensembleLogoInput {
+    display: flex;
+}
+
+#logoNom {
+    top: 268px;
+    left: 636px;
+}
+
+#logoEmail {
+    top: 268px;
+    left: 1136px;
+}
+
+#logoSujet {
+    top: 348px;
+    left: 1136px;
+}
+

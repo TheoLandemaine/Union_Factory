@@ -1,0 +1,65 @@
+.nomPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#CategorieContainer {
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 125px;
+    padding-bottom: 20px;
+}
+
+#EnvironnementImage, #AnimalierImage, #HumanitaireImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    transition: 0.5s ease;
+}
+
+#Categories, #EnvironnementTitrePage, #HumanitaireTitrePage, #AnimalierTitrePage {
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    margin-top: 50px;
+    text-align: center;
+    text-justify: center;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 20px;
+    transition: 0.5s ease;
+    padding: 5px;
+
+}
+
+#EnvironnementTitre, #HumanitaireTitre, #AnimalierTitre {
+    padding: 5px;
+
+}
+
+#Categories:hover, #EnvironnementTitrePage:hover, #HumanitaireTitrePage:hover, #AnimalierTitrePage:hover {
+    transform: scale(1.15);
+}
+
+h2 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.image {
+    transition: 0.5s ease;
+}
+
+#EnvironnementImage:hover, #HumanitaireImage:hover, #AnimalierImage:hover, .image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.cardCategories {
+    margin: 30px;
+}
+
+

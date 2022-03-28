@@ -43,7 +43,8 @@ function Home() {
           <h1>Hello {loginStatus || localStorage.getItem("name")}</h1>
           <img src ={localStorage.getItem("profilePic")}/>
           <form action="/logout" method="GET">
-            <button onClick = {() => {logout(); history.push('/choise')}}>Logout</button>
+            <button onClick = {() => {logout(); history.push('/profil')}}>Logout</button>
+            
           </form>
       </div>
   );
