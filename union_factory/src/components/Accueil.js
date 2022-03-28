@@ -11,7 +11,7 @@ const Accueil = () => (
             <h1>Tu veux les aider ? <br />  Qu'attends-tu ?</h1>
         </div>
         <div>
-            <Link to="/search">
+            <Link to="/recherche">
                 <button id="bouton" >Renseigne toi</button>
             </Link>
         </div>

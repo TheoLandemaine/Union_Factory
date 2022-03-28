@@ -27,7 +27,7 @@ const Header = () => (
                     <div className="navbar-container">
                         <div className="categories">
                             <ul className="Separation">
-                                <Link to="/search">
+                                <Link to="/recherche">
                                     <li> Recherche</li>
                                 </Link>
                                 <Link to="/categories">
