@@ -1,6 +1,7 @@
 import React from 'react';
 import {FaUserCircle} from 'react-icons/fa'
 import Footer         from './Footer';
+import {Link} from 'react-router-dom'
 
 
 const Profil = () => (
@@ -54,7 +55,9 @@ const Profil = () => (
 
                         <div class="text-center">
                             <span class="txt1"> Vous n'avez pas de compte ? </span>
-                            <a class="txt2" href="#"> S'inscire ici </a>
+                            <Link to="/Inscription">
+                                <a class="txt2" href="#"> S'inscire ici </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
