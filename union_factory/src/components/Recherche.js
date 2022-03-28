@@ -4,6 +4,7 @@ import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 
 import "../css/cards.css";
+import Footer from "./Footer";
 
 function Recherche() {
 
@@ -59,6 +60,7 @@ function Recherche() {
                 </div>
                 <p className="no-results" hidden>Aucun résultat</p>
             </div>
+            <Footer />
         </>
     );
 }
