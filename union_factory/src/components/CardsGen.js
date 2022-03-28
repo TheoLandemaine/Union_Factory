@@ -84,6 +84,7 @@ class CardsGen extends React.Component {
             );
         }
     // }
+
 }
 
 export default CardsGen;

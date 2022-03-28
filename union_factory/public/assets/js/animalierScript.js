@@ -17,7 +17,7 @@ var pathname = window.location.pathname;
     console.log(card)
     for (var i = 0; i < card.length; i++){
         // console.log(card[i])
-        card[i].parentNode.parentNode.style.display ="none";
+        card[i].parentNode.parentNode.parentNode.style.display ="none";
     }
 
 

@@ -1,47 +1,70 @@
 import React from 'react';
 import {FaUserCircle} from 'react-icons/fa'
+import Footer         from './Footer';
+import {Link} from 'react-router-dom'
+
 
 const Profil = () => (
     <>
         <div className="profilBody">
-            <div className="nomPage">
-                <h1 id="connect">Connectez-vous</h1>     
-            </div>
            
             <section className="container">
-                <div className="cadre">
+                <div className="cadreConnection">
                     <div>
                         <FaUserCircle id="ConnectionLogo"/>
                     </div>
 
                     <div className='mail'>
                   
-                        <div>
-                            <h2 id="TitreAdresseMail">Adresse-mail:</h2>
+                        {/* <div className="div_AdresseMail">
+                            <h2 id="TitreAdresseMail">Adresse-mail :</h2>
                             <input type='text' placeholder="Entrer votre E-mail" id="InputAdresseMail" required/>
+                        </div> */}
+                        
+                        <div className="div_AdresseMail">
+                            <div class="text-input-container">
+                                <input class="text-input" type="text" placeholder=" " id="InputAdresseMail" autocomplete="off" required/>
+                                <div class="input-underline"></div>
+                                <div class="label-container">
+                                    <span class="input-label">Adresse-mail :</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className='mdp'>
-                            <h2 id="TitreMotDePasse"> Mot de passe:</h2>
+                        {/* <div className='mdp'>
+                            <h2 id="TitreMotDePasse"> Mot de passe :</h2>
                             <input type='text' placeholder="Entrer votre mot de passe" id="InputMotDePasse" required/>
-                            
+                        </div> */}
+
+                        <div className="mdp">
+                            <div class="text-input-container">
+                                <input class="text-input" type="text" placeholder=" " id="InputAdresseMail" autocomplete="off" required/>
+                                <div class="input-underline"></div>
+                                <div class="label-container">
+                                    <span class="input-label">Mot de passe :</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="DivCheckbox">
-                            <input type='checkbox' name="mdp" id="CheckMotDePasse"></input>
-                            <label for="mdp">Mémoriser mot de passe </label> 
-                        </div>
+                        <button className="btn_connection">Se connecter</button>
 
-                        <input type="button" value="Se connecter" id="BoutonConnection"/>
+                        {/* <div className="text_inscription">
+                            <span className="sign-up"> Vous n'avez pas de compte ? </span>
+                            <a id="BoutonIncription" href="#"> S'inscire ici </a>
+                        </div> */}
 
-                        <div className='DivIncription'> 
-                            <label for="sign-up">Vous n'avez pas de compte ? </label>
-                            <input id="BoutonIncription" type="button" value="S'inscire ici"/>
+                        <div class="text-center">
+                            <span class="txt1"> Vous n'avez pas de compte ? </span>
+                            <Link to="/Inscription">
+                                <a class="txt2" href="#"> S'inscire ici </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+        <Footer />
+
     </>
 )
     

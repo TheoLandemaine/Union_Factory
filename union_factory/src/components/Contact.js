@@ -1,57 +1,66 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import "../css/contact.css";
+import { BsPeopleFill } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+import { MdFindInPage } from "react-icons/md";
+import Footer         from './Footer';
 
-const Contact = () => (
-    <>
-        <div className="h1-contact">
-            <h1 id="Contacter">Pour nous contacter </h1>
-        </div>
 
-        <form action="action.html">
-            <div className="contact-container">
 
-                <div className="information-container">
-                    <p><span className="titre-contact">Civilité :</span>
-                        <input type="checkbox" id="masculin"/> Masculin
-                        <input type="checkbox" id="feminin"/> Feminin
-                    </p>
+export default function Contact() {
 
-                    <p id="inputNom" ><span className="titre-contact">Nom :</span> <input type="text" placeholder="Entrer votre nom" required/>   </p>
-                    <p id="inputAdresse" ><span className="titre-contact">Adresse :</span> <input type="text" placeholder="Entrer votre adresse" required/>    </p>
-                    <p id="inputEmail" ><span className="titre-contact">E-mail :</span>  <input type="email" placeholder="Entrer votre E-mail" required/>    </p>
+    function sendEmail(e) {
 
-                    <div className="dropdown-list" >
-                        <p id="inputCountry"><span className="titre-contact">Pays :</span>   </p>
+        e.preventDefault();
 
-                        <div className="bloc">
-                            <div className="select">
-                                <select id="country" name="country">
-                                    <option value="unselected">Votre pays</option>
-                                    <option value="allemange">Allemange</option>
-                                    <option value="angleterre">Angleterre</option>
-                                    <option value="espagne">Espagne</option>
-                                    <option value="france">France</option>
-                                </select>
+        emailjs.sendForm('service_9nw72ob', 'template_jengiid', e.target, 'WJ6KchGMbE_lWsGgR')
+        alert("Votre message à bien été envoyé")
+        e.target.reset();
+    }
+
+    return(
+        <div>
+            <div className="h1-contact">
+                <h1 id="Contacter">Pour nous contacter </h1>
+            </div>
+            {/* <div className="contact-container"> */}
+            <div>
+                <form onSubmit={sendEmail}>
+                    <div>
+                        <div className="rowNameEmail">
+                            <div className="ensembleLogoInput">
+                                <input type="text" className="inputNameEmail" id="inputName" placeholder="Nom" name="name" required/>
+                                <div className="logoContact" id="logoNom">
+                                    <BsPeopleFill />
+                                </div>
+                            </div>
+                            <div className="ensembleLogoInput">
+                                <input type="email" className="inputNameEmail" id="inputEmail" placeholder="Email" name="email" required/>
+                                <div className="logoContact" id="logoEmail">
+                                    <AiOutlineMail />
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-                <div className="msg-container">
-                    <p id="inputSujet"><span className="titre-contact sujet">Sujet :</span> <input type="text" placeholder="Entrer votre sujet" required/> </p>
-                    <p className="msg-message"><span className="titre-contact">Message :</span> <textarea type="text" placeholder="Entrer votre message" id="msg-message" required/> </p>
-                </div>
+                    
+                        <div className="ensembleLogoInput">
+                            <input type="text" className="titre-contact" id="inputSujet" placeholder="Sujet" name="subject" required/>
+                            <div className="logoContact" id="logoSujet">
+                                <MdFindInPage />
+                            </div>
+                        </div>
+                        <div className="msg-container">
+                            <textarea className="msg-message" id="" cols="30" rows="8" id="inputMessage" placeholder="Message" name="message" required></textarea>
+                        </div>
+                        <div className="btn-container">
+                            <input type="submit" className="btnEnvoyer" value="Envoyez"></input>
+                        </div>
+                        </div>
+                </form>
             </div>
-            <input type="submit" value="Valider"/>
-        </form>
-    </>
-)
-    
+            <Footer />
 
+        </div>
+    )
 
-export default Contact;
-
-
-// document.getElementById("masculin").addEventListener("click", () => {
-//     console.log('test')
-// })
+}

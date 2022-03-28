@@ -6,6 +6,7 @@ import "../css/style.css";
 
 const Accueil = () => (
     <>
+    <div className="tamere">
         <div className="PhraseAccueil">
             <h1>Tu veux les aider ? <br />  Qu'attends-tu ?</h1>
         </div>
@@ -14,7 +15,7 @@ const Accueil = () => (
                 <button id="bouton" >Renseigne toi</button>
             </Link>
         </div>
-        
+    </div>
 
     </>
 )

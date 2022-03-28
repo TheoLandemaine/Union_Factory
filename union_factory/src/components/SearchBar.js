@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 import useScript from "../javaScript/UseScript";
+
 
 
 // function Search() {
@@ -46,6 +48,7 @@ const SearchBar = () =>{
         <>
             <div className="searchBar" id="barSearch">
                 <input type="text" name="searchBar" id="searchBar" placeholder="Rechercher" ></input> 
+                <i><FaSearch /></i>
             </div>
         </>
     )
