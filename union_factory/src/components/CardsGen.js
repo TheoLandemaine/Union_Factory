@@ -61,23 +61,29 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 class CardsGen extends React.Component {
     render() {
-        return (
-            <div className="card">
-                <div className="card-image">
-                    <img src={this.props.card.a_image} alt="association" />
+        // if (this.state.isLoaded) {
+        //     return <div> is loaded</div>
+        // }
+        // else{
+            return (
+                // <div>  is not loaded | {this.state.isLoaded}</div>
+                <div className="card">
+                    <div className="card-image">
+                        <img src={this.props.card.a_image} alt="association"/>
+                    </div>
+                    <div className="card-text">
+                        <span className="association">{this.props.card.a_titre}</span>
+                        <p className={this.props.card.a_categorie}>{this.props.card.a_description}</p>
+                        <a className="inc button" href={this.props.card.a_lien} target="_blank" rel="noreferrer">
+                            Cliquez pour visiter
+                        </a>
+                        <i className="heart-filled"><AiFillHeart/></i>
+                        <i className="heart-unfilled" hidden><AiOutlineHeart/></i>
+                    </div>
                 </div>
-                <div className="card-text">
-                    <span className="association">{this.props.card.a_titre}</span>
-                    <p className={this.props.card.a_categorie}>{this.props.card.a_description}</p>
-                    <a className="inc button" href={this.props.card.a_lien} target="_blank" rel="noreferrer">
-                        Cliquez pour visiter
-                    </a>
-                    <i className="heart-filled"><AiFillHeart /></i>
-                    <i className="heart-unfilled" hidden><AiOutlineHeart /></i>
-                </div>
-            </div>
-        );
-    }
+            );
+        }
+    // }
 }
 
 export default CardsGen;
