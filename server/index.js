@@ -17,6 +17,16 @@ const saltRounds = 10;
 
 const { OAuth2Client } = require('google-auth-library');
 
+app.get("/api/get", (req,res)=>{
+    db.query("SELECT * FROM `association`", (err,result)=>{
+        if(err) {
+            console.log(err)
+        }
+        res.send(result)
+        console.log(result)
+    });   
+});
+
 app.use(express.json());
 app.use(cors({ 
     origin: ["http://localhost:3000"],

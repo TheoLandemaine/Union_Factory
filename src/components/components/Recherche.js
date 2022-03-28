@@ -1,28 +1,43 @@
 import React from 'react';
 import {useState , useEffect} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
+
 import "../css/cards.css";
 import Footer from "./Footer";
 
-function Animalier() {
+function Recherche() {
 
     const [data, setData] = useState([]);
+    const [searchTerm, setSearchTerm] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3003/api/get')
+        fetch('http://localhost:3002/api/get')
             .then(res => res.json())
             .then(json => setData(json))
     }, []);
 
+    const handleSearchTerm = (e) => {
+        let value = e.target.value;
+        setSearchTerm(value);
+    }
+
+    // console.log(searchTerm);
     return (
         <>
-            <div className="nomPage">
-                <h1 id="AnimalierTitrePage">Animalier </h1>
+            <div className="searchBar" id="barSearch">
+                <input type="text"
+                       name="searchBar"
+                       id="searchBar"
+                       placeholder="Rechercher une association"
+                       onChange={handleSearchTerm}
+                />
+                <i><FaSearch /></i>
             </div>
             <div className="container">
                 <div className="cards-container">
                     {data.filter((association)=>{
-                        return association.a_categorie.toString().toLowerCase().includes('Animalier'.toString().toLowerCase());
+                        return association.a_titre.toString().toLowerCase().includes(searchTerm.toString().toLowerCase());
                     }).map(association => {
                         // console.log(association.a_titre);
                         return (
@@ -50,4 +65,4 @@ function Animalier() {
     );
 }
 
-export default Animalier;
+export default Recherche;
