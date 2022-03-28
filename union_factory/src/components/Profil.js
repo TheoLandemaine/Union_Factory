@@ -47,9 +47,14 @@ const Profil = () => (
 
                         <button className="btn_connection">Se connecter</button>
 
-                        <div className="text_inscription">
+                        {/* <div className="text_inscription">
                             <span className="sign-up"> Vous n'avez pas de compte ? </span>
                             <a id="BoutonIncription" href="#"> S'inscire ici </a>
+                        </div> */}
+
+                        <div class="text-center">
+                            <span class="txt1"> Vous n'avez pas de compte ? </span>
+                            <a class="txt2" href="#"> S'inscire ici </a>
                         </div>
                     </div>
                 </div>

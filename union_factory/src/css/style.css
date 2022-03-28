@@ -96,7 +96,7 @@ PAGE DE CONNECTION
 ---------------------------------------------------------------------------------------------------------------
 */
 
-.nomPage {
+/* .nomPage {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -118,7 +118,7 @@ PAGE DE CONNECTION
 
 #connect:hover {
   transform: scale(1.15);
-}
+} */
 
 .cadre{
   display: flex;
@@ -225,6 +225,20 @@ input.cadre{
   padding-top: 2rem;
 }
 
+a {
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+.txt1 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.txt2 {
+  font-size: 13px;
+  color: #333;
+}
 
 .btn_connection {
   display: flex;
@@ -294,7 +308,7 @@ input.cadre{
 /* Move label-container up when focused OR when there is text left in the input */
 .text-input-container .text-input:focus ~ .label-container,
 .text-input-container .text-input:not(:placeholder-shown) ~ .label-container {
-  transform: translateY(-100%);
+  transform: translateY(-90%);
 }
 
 /* The input-label */
@@ -305,7 +319,7 @@ input.cadre{
   color: var(--placeholder-color); /* Optional */
 
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   transform: none; /* Normal state */
   transition: all var(--animation-duration) ease;
 }
