@@ -129,31 +129,37 @@ PAGE DE CONNECTION
   background: rgba(255, 255, 255, .8);
 }
 
+.cadreConnection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  margin: 50px;
+  border-radius:15px;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 40%);
+}
+
 #ConnectionLogo{
-  font-size: 200px;
+  font-size: 150px;
   margin: 15px;
 }
 
 .mail{
-  font-size: 12px;
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 
 #TitreAdresseMail, #TitreMotDePasse {
   display: flex;
-  justify-content: center;
-  width: 150px;
   text-align: center;
-  text-justify: center;
   background-color: rgba(255, 255, 255, .8);
   border-radius: 20px;
   transition: 0.5s ease;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
-input{
+input.cadre{
   margin: 0 5px;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.1);
@@ -161,8 +167,15 @@ input{
 }
 
 #InputAdresseMail, #InputMotDePasse {
-  height: 30px;
-  text-align: center;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #CCC;
+
+}
+
+#InputAdresseMail:focus, #InputMotDePasse:focus {
+  outline: none;
 }
 
 .DivCheckbox {
@@ -202,6 +215,35 @@ input{
   color: rgb(26, 118, 204);
   text-decoration: underline;
 }
+
+.div_AdresseMail, .mdp, .btn_connection, .text_inscription {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text_inscription {
+  padding-top: 2rem;
+}
+
+
+.btn_connection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none; 
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #1190ff, rgb(0, 217, 255));
+}
+
+
 
 
 /* 
