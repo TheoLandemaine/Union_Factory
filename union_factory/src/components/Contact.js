@@ -50,7 +50,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="msg-container">
-                            <textarea className="msg-message" id="" cols="30" rows="8" id="inputMessage" placeholder="Message" name="message" required></textarea>
+                            <textarea className="msg-message" cols="30" rows="8" id="inputMessage" placeholder="Message" name="message" required></textarea>
                         </div>
                         <div className="btn-container">
                             <input type="submit" className="btnEnvoyer" value="Envoyez"></input>
