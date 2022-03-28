@@ -241,12 +241,8 @@ a {
 }
 
 .btn_connection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  width: 100%;
-  height: 50px;
+  display: inline-block;
+  padding: 1em 2em;
   font-size: 15px;
   color: #fff;
   text-transform: uppercase;
@@ -254,9 +250,14 @@ a {
   outline: none; 
   border: none;
   border-radius: 20px;
+  transition: all 0.2s;
   background: linear-gradient(to bottom right, #1190ff, rgb(0, 217, 255));
 }
 
+.btn_connection:active {
+  -webkit-transform: scale(0.91);
+  transform: scale(0.91);
+}
 
 /** Input container */
 .text-input-container {
