@@ -9,6 +9,7 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 125px;
+    padding-bottom: 20px;
 }
 
 #EnvironnementImage, #AnimalierImage, #HumanitaireImage {

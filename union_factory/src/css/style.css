@@ -12,7 +12,7 @@ html {
 }
 
 html, body, .background-component {
-  height: auto;
+  height: 100%;
   background: url(../images/fondSite.jpeg)no-repeat center fixed;
   background-size: cover;
   /* background-color: #2a98f9; */
@@ -214,9 +214,6 @@ HEADER
   font-size: 30px;
 }
 
-footer Accueil.js {
-  background-color: red;
-}
 
 #logo{
   font-size: 35px;
@@ -274,7 +271,6 @@ footer Accueil.js {
   cursor: pointer;
 }
 
-
 .searchBar{
   display: flex;
   justify-content: center;
@@ -287,6 +283,7 @@ footer Accueil.js {
   border-radius: 20px;
   padding: 0.9em;
   padding-left: 45px;
+
 }
 
 #fa{
@@ -294,7 +291,7 @@ footer Accueil.js {
   height: 2000px;
 }
 
-i {
+.searchBar i {
   position:absolute; 
   left:280px; 
   top:130px; 
@@ -316,6 +313,10 @@ FOOTER
   padding: 20px;
   flex-direction: row;
   height: auto;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  margin-top: 50px;
 }
 
 .text_footer {

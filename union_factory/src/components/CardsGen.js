@@ -20,9 +20,10 @@ class CardsGen extends React.Component {
             <a className="inc button" href={this.props.card.link} target="_blank" rel="noreferrer">
               Cliquez pour visiter
             </a>
-            <i className="heart-filled"><AiFillHeart /></i>
-            <i className="heart-unfilled" hidden><AiOutlineHeart /></i>
+            
         </div>
+        <i className="heart-filled"><AiFillHeart /></i>
+        <i className="heart-unfilled" hidden><AiOutlineHeart /></i>
       </div>
     );
   }

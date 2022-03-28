@@ -79,7 +79,6 @@
   font-size: 28px;
 }
 
-
 .card:hover {
   transform: scale(1.10);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
@@ -92,7 +91,7 @@
   text-decoration: none;
   color: #000;
   margin: 20px 0;
-  /* border: solid 2px rgb(172, 26, 87); */
+  /* border: solid 2px #5cc8f9; */
   background-color: #5cc8f9;
   border-radius: 15px;
   transition: 0.25s ease;
