@@ -1,47 +1,51 @@
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-
+import React from 'react';
+import {useState , useEffect} from 'react';
+import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import "../css/cards.css";
-import "../css/Categories.css";
 
-import Cards from "./Cards";
-import React from "react";
-import asso  from './Assos';
-import useScript from "../javaScript/UseScript";
+function Humanitaire() {
 
+    const [data, setData] = useState([]);
 
-class Humanitaire extends React.Component {
-// const Humanitaire = () => {
-//     useScript('./assets/js/humanitaireScript.js');
+    useEffect(() => {
+        fetch('http://localhost:3002/api/get')
+            .then(res => res.json())
+            .then(json => setData(json))
+    }, []);
 
-    componentDidMount() {
-        console.log('c\'est monter')
-        var card = document.querySelectorAll(".Environnement,.Animalier")
-
-        console.log(card)
-
-        for (var i = 0; i < card.length; i++){
-            card[i].parentNode.parentNode.style.display ="none";
-        }
-    }
-    render(){
     return (
         <>
             <div className="nomPage">
                 <h1 id="HumanitaireTitrePage">Humanitaire </h1>
             </div>
-            <div className="cardCategories">
-                <BrowserRouter>
-                    <Switch>
-                        <Route
-                            path="/:filter?"
-                            render={(props) => <Cards {...props} cards={asso}/>}
-                        />
-                    </Switch>
-                </BrowserRouter>
+            <div className="container">
+                <div className="cards-container">
+                    {data.filter((association)=>{
+                        return association.a_categorie.toString().toLowerCase().includes('Humanitaire'.toString().toLowerCase());
+                    }).map(association => {
+                        // console.log(association.a_titre);
+                        return (
+                            <div className="card" key={association.a_assoID} id={association.a_assoID}>
+                                <div className="card-image">
+                                    <img src={association.a_image} alt="association"/>
+                                </div>
+                                <div className="card-text">
+                                    <span className="association">{association.a_titre}</span>
+                                    <p className={association.a_categorie}>{association.a_description}</p>
+                                    <a className="inc button" href={association.a_lien} target="_blank" rel="noreferrer">
+                                        Cliquez pour visiter
+                                    </a>
+                                    <i className="heart-filled"><AiFillHeart/></i>
+                                    <i className="heart-unfilled" hidden><AiOutlineHeart/></i>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+                <p className="no-results" hidden>Aucun résultat</p>
             </div>
-
         </>
-    )}
+    );
 }
 
 export default Humanitaire;
