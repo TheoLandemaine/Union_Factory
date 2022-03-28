@@ -1,9 +1,9 @@
-import imgOcean from "../images/fondAppliOcean.jpeg";
-import imgDesert from "../images/desert.jpeg"
+import imgOcean from "./images/fondAppliOcean.jpeg";
+import imgDesert from "./images/desert.jpeg"
 
-import imgJungle from "../images/fondEnvironnementCards.webp"
-import imgAnimal from "../images/fondAnimalCards.jpeg"
-import imgHumanitaire from "../images/fondHumanitaireCards.webp"
+import imgJungle from "./images/fondEnvironnementCards.webp"
+import imgAnimal from "./images/fondAnimalCards.jpeg"
+import imgHumanitaire from "./images/fondHumanitaireCards.webp"
 
 
 let asso = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import {signWithGoogle} from '../components/js/Firebase';
+import {signWithGoogle} from '../components/Firebase';
 import  { useHistory } from 'react-router-dom';
 
 function Choise() {

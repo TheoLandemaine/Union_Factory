@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/favoris.css";
+import "./css/favoris.css";
 import Footer         from './Footer';
 
 

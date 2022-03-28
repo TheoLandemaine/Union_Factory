@@ -1,8 +1,8 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import useScript from './UseScript';
 
-import "../css/cards.css";
-import "../css/Categories.css";
+import "./css/cards.css";
+import "./css/Categories.css";
 
 import Cards from "./Cards";
 import asso  from './Assos';

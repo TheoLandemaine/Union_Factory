@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Axios from 'axios';
-import '../../App.css';
+import '../App.css';
 // import {FaUserCircle} from 'react-icons/fa';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

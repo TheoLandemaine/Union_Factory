@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/cards.css";
+import "./css/cards.css";
 import CardsGen from "./CardsGen";
 import Footer    from './Footer';
 

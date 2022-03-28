@@ -3,7 +3,7 @@ import {useState , useEffect} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 
-import "../css/cards.css";
+import "./css/cards.css";
 
 function Recherche() {
 

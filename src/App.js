@@ -5,31 +5,31 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
-import App_Register from './components/js/App_Register';
+import App_Register from './components/App_Register';
 
 import Home from './routes/Home';
 import Choise from './routes/Buttons'
-import Header         from './components/js/Header';
-import Cards          from './components/js/Cards';
-import Accueil        from './components/js/Accueil';
+import Header         from './components/Header';
+import Cards          from './components/Cards';
+import Accueil        from './components/Accueil';
 
-import Recherche      from './components/js/Recherche';
-import Search         from './components/js/Search';
+import Recherche      from './components/Recherche';
+import Search         from './components/Search';
 
-import Categories     from './components/js/Categories';
-import Favoris        from './components/js/Favoris';
-import Contact        from './components/js/Contact';
-import Profil         from './components/js/Profil';
-import Inscription    from './components/js/Inscription';
-import InfosCard      from './components/js/InfosCard';
+import Categories     from './components/Categories';
+import Favoris        from './components/Favoris';
+import Contact        from './components/Contact';
+import Profil         from './components/Profil';
+import Inscription    from './components/Inscription';
+import InfosCard      from './components/InfosCard';
 // import asso           from './Assos';
-import SearchBar      from './components/js/SearchBar';
-import Environnement  from './components/js/Environnement';
-import Humanitaire    from './components/js/Humanitaire';
-import Animalier      from './components/js/Animalier';
-import Footer         from './components/js/Footer';
-import Propos         from './components/js/Propos';
-import AjoutAssos     from './components/js/AjoutAssos';
+import SearchBar      from './components/SearchBar';
+import Environnement  from './components/Environnement';
+import Humanitaire    from './components/Humanitaire';
+import Animalier      from './components/Animalier';
+import Footer         from './components/Footer';
+import Propos         from './components/Propos';
+import AjoutAssos     from './components/AjoutAssos';
 
 
 import Axios from 'axios';

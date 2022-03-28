@@ -1,7 +1,7 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import "../css/cards.css";
-import "../css/Categories.css";
+import "./css/cards.css";
+import "./css/Categories.css";
 
 import Cards from "./Cards";
 import React from "react";
@@ -9,25 +9,13 @@ import asso  from './Assos';
 import useScript from "./UseScript";
 
 
-class Humanitaire extends React.Component {
-// const Humanitaire = () => {
-//     useScript('./assets/js/humanitaireScript.js');
+const Environement = () => {
+    useScript('./assets/js/environnementScript.js');
 
-    componentDidMount() {
-        console.log('c\'est monter')
-        var card = document.querySelectorAll(".Environnement,.Animalier")
-
-        console.log(card)
-
-        for (var i = 0; i < card.length; i++){
-            card[i].parentNode.parentNode.style.display ="none";
-        }
-    }
-    render(){
     return (
         <>
             <div className="nomPage">
-                <h1 id="HumanitaireTitrePage">Humanitaire </h1>
+                <h1 id="EnvironnementTitrePage">Environnement </h1>
             </div>
             <div className="cardCategories">
                 <BrowserRouter>
@@ -39,9 +27,9 @@ class Humanitaire extends React.Component {
                     </Switch>
                 </BrowserRouter>
             </div>
-
         </>
-    )}
+    )
 }
 
-export default Humanitaire;
+
+export default Environement;
