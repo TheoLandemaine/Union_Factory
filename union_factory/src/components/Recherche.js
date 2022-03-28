@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState , useEffect} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
+
 import "../css/cards.css";
 
 function Recherche() {
@@ -22,13 +24,14 @@ function Recherche() {
     // console.log(searchTerm);
     return (
         <>
-            <div>
+            <div className="searchBar" id="barSearch">
                 <input type="text"
                        name="searchBar"
                        id="searchBar"
                        placeholder="Rechercher une association"
                        onChange={handleSearchTerm}
                 />
+                <i><FaSearch /></i>
             </div>
             <div className="container">
                 <div className="cards-container">
