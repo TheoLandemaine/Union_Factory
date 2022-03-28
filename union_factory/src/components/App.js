@@ -19,6 +19,8 @@ import Humanitaire    from './Humanitaire';
 import Animalier      from './Animalier';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import UseState from 'react';
+import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 
 
 class App extends React.Component {
@@ -40,8 +42,46 @@ class App extends React.Component {
           })
         });
   }
+
   render() {
-    var {items} = this.state;
+    var {isLoaded, items} = this.state;
+
+    // function LaRecherche() {
+    //   const [searchTerm, setSearchTerm] = useState("");
+    //   return (
+    //       <>
+    //         <input
+    //             type="text"
+    //             placeholder="Search..."
+    //             onChange={(event) => {
+    //               setSearchTerm (event.target.value);
+    //             }}
+    //         />
+    //         {this.props.card.filter((val)=> {
+    //           if (searchTerm == "") {
+    //             return val
+    //           } else if (val.a_titre.toLowerCase().includes(searchTerm.toLowerCase())) {
+    //             return val
+    //           }
+    //         })}
+    //         <div className="card">
+    //           <div className="card-image">
+    //             <img src={this.props.card.a_image} alt="association" />
+    //           </div>
+    //           <div className="card-text">
+    //             <span className="association">{this.props.card.a_titre}</span>
+    //             <p className={this.props.card.a_categorie}>{this.props.card.a_description}</p>
+    //             <a className="inc button" href={this.props.card.a_lien} target="_blank" rel="noreferrer">
+    //               Cliquez pour visiter
+    //             </a>
+    //             <i className="heart-filled"><AiFillHeart /></i>
+    //             <i className="heart-unfilled" hidden><AiOutlineHeart /></i>
+    //           </div>
+    //         </div>
+    //       </>)}
+    // const [searchTerm,setSearchTerm] =UseState('');
+
+
     return (
       // html
       <>
@@ -50,7 +90,10 @@ class App extends React.Component {
           <Header />
             <Switch>
 
-              <Route path="/recherche"    exact component={Recherche} />
+              <Route path="/recherche"        exact component={Recherche}/>
+              {/*  <Route path="/:filter?" render={(props) => <Recherche {...props} cards={items . isLoaded} />}/>*/}
+              {/*</Route>*/}
+
               <Route path="/search"        exact component={Search}>
                 <SearchBar />
                 <Route path="/:filter?" render={(props) => <Cards {...props} cards={items} />}/>
