@@ -57,7 +57,7 @@ function Recherche() {
                         );
                     })}
                 </div>
-                <p className="no-results" hidden>Aucun résultat</p>"
+                <p className="no-results" hidden>Aucun résultat</p>
             </div>
         </>
     );
