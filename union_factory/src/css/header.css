@@ -81,8 +81,7 @@
 }
 
 .searchBar i {
-    position:absolute;
-    left:280px;
-    top:130px;
-    padding:9px 8px;
+    position:relative;
+    left:80px;
+    top:65px;
 }
