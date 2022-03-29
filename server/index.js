@@ -65,7 +65,7 @@ db.connect((err) => {
     console.log("database connected to : " + process.env.DATABASE_HOST);
 })
 
-app.post('/register', (req, res) => {
+app.post('/inscription', (req, res) => {
 
     const username = req.body.username;
     const email = req.body.email;
