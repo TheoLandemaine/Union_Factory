@@ -26,13 +26,13 @@ function Recherche() {
     return (
         <>
             <div className="searchBar" id="barSearch">
+                <i><FaSearch /></i>
                 <input type="text"
                        name="searchBar"
                        id="searchBar"
                        placeholder="Rechercher une association"
                        onChange={handleSearchTerm}
                 />
-                <i><FaSearch /></i>
             </div>
             <div className="container">
                 <div className="cards-container">
