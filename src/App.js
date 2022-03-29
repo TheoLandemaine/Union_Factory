@@ -5,7 +5,6 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
-import App_Register from './components/App_Register';
 
 import Home from './routes/Home';
 import Choise from './routes/Buttons'
@@ -104,7 +103,6 @@ class App extends React.Component {
               <Route path="/animalier"     exact component={Animalier} />
               <Route path="/propos"        exact component={Propos} />
               <Route path="/ajoutassos"    exact component={AjoutAssos} />
-              <Route path="/register"      exact component={App_Register}/>
               <Route path="/home"          exact component={Home} />
               <Route path="/choise"        exact component={Choise} />
               <Route path="/easterEgg"     exact component={EasterEgg} />
