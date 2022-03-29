@@ -1,7 +1,7 @@
 import React from 'react';
-import imgEnvironnement from "./images/fondEnvironnementApp.jpeg";
-import imgHumanitaire from "./images/fondHumanitaireApp.png"
-import imgAnimalier from "./images/fondAnimalApp.jpeg"
+import imgEnvironnement from "../images/fondEnvironnementApp.jpeg";
+import imgHumanitaire from "../images/fondHumanitaireApp.png"
+import imgAnimalier from "../images/fondAnimalApp.jpeg"
 import "../css/Categories.css";
 import {Link} from 'react-router-dom'
 import Footer         from './Footer';
