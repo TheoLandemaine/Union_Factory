@@ -216,7 +216,7 @@ input.cadre{
   text-decoration: underline;
 }
 
-.div_AdresseMail, .mdp, .btn_connection, .text_inscription {
+.div_AdresseMail, .mdp, .btn_connection, .text_inscription, .insert-username, .insert-mail {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -288,7 +288,7 @@ a {
   width: 100%;
   position: absolute;
   bottom: 0;
-  
+  left: 0;
   outline: none;
   border: none;
   padding-bottom: 4px; /* Better-looking line spacing */
@@ -320,6 +320,7 @@ a {
 
   position: absolute;
   bottom: 5px;
+  left: 0;
   transform: none; /* Normal state */
   transition: all var(--animation-duration) ease;
 }
