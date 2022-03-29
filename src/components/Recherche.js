@@ -12,7 +12,7 @@ function Recherche() {
     const [searchTerm, setSearchTerm] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3002/api/get')
+        fetch('http://localhost:3003/api/get')
             .then(res => res.json())
             .then(json => setData(json))
     }, []);
