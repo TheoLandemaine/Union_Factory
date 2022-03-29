@@ -1,8 +1,5 @@
 require('dotenv').config()
 
-const express = require('express');
-const app = express();
-
 const mysql = require('mysql');
 const cors = require('cors');
 
@@ -13,9 +10,18 @@ const session = require('express-session');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-
+const express = require('express');
+const app = express();
 
 const { OAuth2Client } = require('google-auth-library');
+
+app.use(cors());
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 app.get("/api/get", (req,res)=>{
     db.query("SELECT * FROM `association`", (err,result)=>{
