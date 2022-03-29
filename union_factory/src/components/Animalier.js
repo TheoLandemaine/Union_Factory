@@ -2,7 +2,8 @@ import React from 'react';
 import {useState , useEffect} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import "../css/cards.css";
-import Footer from "./Footer";
+import Footer from "./Footer"
+import useScript from "../javaScript/UseScript";
 
 function Animalier() {
 
@@ -13,6 +14,8 @@ function Animalier() {
             .then(res => res.json())
             .then(json => setData(json))
     }, []);
+
+    useScript('./assets/js/easterEggLink.js');
 
     return (
         <>
