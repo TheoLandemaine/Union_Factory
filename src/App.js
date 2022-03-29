@@ -30,6 +30,8 @@ import Animalier      from './components/Animalier';
 import Footer         from './components/Footer';
 import Propos         from './components/Propos';
 import AjoutAssos     from './components/AjoutAssos';
+import EasterEgg      from './components/EasterEgg';
+
 
 
 import Axios from 'axios';
@@ -105,6 +107,7 @@ class App extends React.Component {
               <Route path="/register"      exact component={App_Register}/>
               <Route path="/home"          exact component={Home} />
               <Route path="/choise"        exact component={Choise} />
+              <Route path="/easterEgg"     exact component={EasterEgg} />
               
             </Switch>
           </BrowserRouter>
