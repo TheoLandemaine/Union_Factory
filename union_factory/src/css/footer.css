@@ -1,4 +1,24 @@
 
+/*keep footer a the bottom of the page*/
+/*footer {*/
+/*  position: fixed;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  width: 100%;*/
+/*  background-color: #f5f5f5;*/
+/*  color: black;*/
+/*  text-align: center;*/
+/*}*/
+
+/*footer{*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*}*/
+
 .container_footer {
     background-color: black;
     color: white;
@@ -8,10 +28,8 @@
     padding: 20px;
     flex-direction: row;
     height: auto;
-    position: absolute;
     width: 100%;
-    left: 0px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .text_footer {
