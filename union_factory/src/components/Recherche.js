@@ -1,7 +1,8 @@
 import React from 'react';
-import {useState , useEffect} from 'react';
+import {useState , useEffect, useContext} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
+import {UserContext} from '../context/userContext';
 
 import "../css/cards.css";
 import Footer from "./Footer";
@@ -23,6 +24,9 @@ function Recherche() {
     }
 
     // console.log(searchTerm);
+
+    const {modalState, toggleModals} = useContext(UserContext);
+    console.log(modalState, toggleModals);
     return (
         <>
             <div className="searchBar" id="barSearch">
@@ -32,6 +36,7 @@ function Recherche() {
                        id="searchBar"
                        placeholder="Rechercher une association"
                        onChange={handleSearchTerm}
+
                 />
             </div>
             <div className="container">
@@ -49,10 +54,15 @@ function Recherche() {
                                     <span className="association">{association.a_titre}</span>
                                     <p className={association.a_categorie}>{association.a_description}</p>
                                     <a className="inc button" href={association.a_lien} target="_blank" rel="noreferrer">
-                                        Cliquez pour visiter
+                                        Cliquez pour visiter le site
                                     </a>
-                                    <i className="heart-filled"><AiFillHeart/></i>
-                                    <i className="heart-unfilled" hidden><AiOutlineHeart/></i>
+                                    {modalState.heartField &&(
+                                            <i className="heart-filled" onClick={()=> toggleModals("heartUnField")}><AiFillHeart/></i>
+                                    )}
+                                    {modalState.heartUnField &&(
+                                        <i className="heart-unfilled" onClick={()=> toggleModals("heartField")}><AiOutlineHeart/></i>
+                                    )}
+
                                 </div>
                             </div>
                         );
