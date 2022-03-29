@@ -121,9 +121,7 @@ app.post('/login', (req, res)=>{
     const email = req.body.email;
     const password = req.body.password;
 
-    db.query("SELECT * FROM login WHERE email = ?;",
-    email, 
-    (err,result)=>{
+    db.query("SELECT * FROM login WHERE email = ?;", email, (err,result)=>{
         if(err){
             // console.log(err);
             res.send({err: err})
@@ -190,24 +188,29 @@ app.post('/google-login', async (req, res) => {
 
 
 const logout = async (req, res) => {
+    // const user = req.session.user[0].email;
+
     res.clearCookie("userId", { path: "/" });
-    //set uset logged out in database
-    db.query("UPDATE login SET loggedIn = 'false' WHERE email = ?", req.session.user[0].email, (err, result) => {
-        if(err) throw err;
-        if(err){
-            res.send({err: err})
-        }
-        if (result.length > 0){
-            res.send(result);
-        }
-    })        
+
+    // db.query("UPDATE login SET loggedIn = 'false' WHERE email = ?", user, (err, result) => {
+    //     if(err) throw err;
+    //     if(err){
+    //         res.send({err: err})
+    //     }
+    //     if (result.length > 0){
+    //         res.send(result);
+    //     }
+    // })
+
+
     res
       .status(200)
       .json({ success: true, message: "User logged out successfully" });
 };
 
+
 app.get("/logout", logout, (req, res) => {
-    res.send("You have been logged out successfully");
+    res.send("You have been logged out successfully"); 
 });
 
 
