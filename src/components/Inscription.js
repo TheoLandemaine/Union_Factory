@@ -52,7 +52,7 @@ function App_Register() {
 
         <div className="profilBody">
         <section className="container">
-            <div className="cadreConnection">
+            <div className="cadreInscription">
           <div>
               <FaUserCircle id="ConnectionLogo"/>
           </div>
@@ -70,46 +70,49 @@ function App_Register() {
                         </div>
                     </div>
                 </div>
-                <div className="insert-mail">
-                    <div class="text-input-container">
-                        <input class="text-input" type="text" onChange={(e) => { setEmailReg(e.target.value); } }
-                                placeholder=" " id="InputAdresseMail" required/>
-                        <div class="input-underline"></div>
-                        <div class="label-container">
-                            <span class="input-label">Adresse-mail :</span>
+
+                    <div className="insert-mail">
+                        <div class="text-input-container">
+                            <input class="text-input" type="text" onChange={(e) => { setEmailReg(e.target.value); } }
+                                    placeholder=" " id="InputAdresseMail" required/>
+                            <div class="input-underline"></div>
+                            <div class="label-container">
+                                <span class="input-label">Adresse-mail :</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="mdp">
-                    <div class="text-input-container">
-                        <input class="text-input" type="text" onChange={(e) => { setPasswordReg(e.target.value); } }
-                                placeholder=" " id="InputAdresseMail" required/>
-                        <div class="input-underline"></div>
-                        <div class="label-container">
-                            <span class="input-label">Mot de passe:</span>
+                    <div className="mdp">
+                        <div class="text-input-container">
+                            <input class="text-input" type="text" onChange={(e) => { setPasswordReg(e.target.value); } }
+                                    placeholder=" " id="InputAdresseMail" required/>
+                            <div class="input-underline"></div>
+                            <div class="label-container">
+                                <span class="input-label">Mot de passe:</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="mdp">
-                    <div class="text-input-container">
-                        <input class="text-input" type="text" onChange={(e) => { setPrenomReg(e.target.value); } }
-                                placeholder=" " id="InputAdresseMail" required/>
-                        <div class="input-underline"></div>
-                        <div class="label-container">
-                            <span class="input-label">Prénom :</span>
+
+                    <div className="mdp">
+                        <div class="text-input-container">
+                            <input class="text-input" type="text" onChange={(e) => { setPrenomReg(e.target.value); } }
+                                    placeholder=" " id="InputAdresseMail" required/>
+                            <div class="input-underline"></div>
+                            <div class="label-container">
+                                <span class="input-label">Prénom :</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="mdp">
-                    <div class="text-input-container">
-                        <input class="text-input" type="text" onChange={(e) => { setNomReg(e.target.value); } } 
-                                placeholder=" " id="InputAdresseMail" required/>
-                        <div class="input-underline"></div>
-                        <div class="label-container">
-                            <span class="input-label">Nom :</span>
+                    <div className="mdp">
+                        <div class="text-input-container">
+                            <input class="text-input" type="text" onChange={(e) => { setNomReg(e.target.value); } } 
+                                    placeholder=" " id="InputAdresseMail" required/>
+                            <div class="input-underline"></div>
+                            <div class="label-container">
+                                <span class="input-label">Nom :</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+
                 <div className='mdp'>
                   <h2>Date de Naissance:</h2>
                   <input type='date' onChange={(e) => { setDateNaissanceReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
