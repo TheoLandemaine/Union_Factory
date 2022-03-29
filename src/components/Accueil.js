@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import "./css/style.css";
+import "../css/style.css";
 
 //JS de Rui pour les Cards 
 

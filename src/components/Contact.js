@@ -1,6 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import "./css/contact.css";
+import "../css/contact.css";
 import { BsPeopleFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdFindInPage } from "react-icons/md";

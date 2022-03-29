@@ -3,7 +3,8 @@ import {useState , useEffect} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 
-import "./css/cards.css";
+import ".../css/cards.css";
+import Footer from "./Footer";
 
 function Recherche() {
 
@@ -11,7 +12,7 @@ function Recherche() {
     const [searchTerm, setSearchTerm] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3003/api/get')
+        fetch('http://localhost:3002/api/get')
             .then(res => res.json())
             .then(json => setData(json))
     }, []);
@@ -57,8 +58,9 @@ function Recherche() {
                         );
                     })}
                 </div>
-                <p className="no-results" hidden>Aucun résultat</p>"
+                <p className="no-results" hidden>Aucun résultat</p>
             </div>
+            <Footer />
         </>
     );
 }

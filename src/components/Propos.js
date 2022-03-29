@@ -1,14 +1,11 @@
 import React from 'react';
 import Footer         from './Footer';
-
-
 const Propos = () => (
     <>
         <div className="nomPage">
             <h1 id="proposTitre">À propos de nous :</h1>    
         </div>
         <div className="cadre_text">
-
             <h3 className="textPresentation">
                 Nous sommes un groupe de 4 étudiants qui avait un projet à réaliser durant notre cursus de 2 ans au sein 
                 de la Coding Factory by ESIEE-IT. Ce site est notre projet. On a eu l’idée de créer un répertoire des 
@@ -33,10 +30,7 @@ const Propos = () => (
             </h3>
         </div>
         <Footer />
-
     </>
 )
     
-
-
 export default Propos;

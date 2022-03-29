@@ -1,7 +1,7 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import "./css/cards.css";
-import "./css/Categories.css";
+import "../css/cards.css";
+import "../css/Categories.css";
 
 import Cards from "./Cards";
 import React from "react";
