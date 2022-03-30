@@ -21,8 +21,8 @@ function App_Register() {
 
   Axios.defaults.withCredentials = true;
 
-  const register = () => {
-    Axios.post("http://localhost:3003/register", 
+  const inscription = () => {
+    Axios.post("http://localhost:3003/inscription", 
     { 
       username: usernameReg,
       email: emailReg, 
@@ -118,33 +118,6 @@ function App_Register() {
                   <input type='date' onChange={(e) => { setDateNaissanceReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
                 </div>
 
-                {/* <div className="insert-username">
-                  <h2>Username:</h2>
-                  <input type='text' onChange={(e) => { setUsernameReg(e.target.value); } } placeholder="entrer votre username" required />
-                </div>
-                <div className="insert-mail">
-                  <h2>Adresse-mail:</h2>
-                  <input type='email' onChange={(e) => { setEmailReg(e.target.value); } } placeholder="entrer votre E-mail" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Mot de passe:</h2>
-                  <input type='password' onChange={(e) => { setPasswordReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Prenom:</h2>
-                  <input type='text' onChange={(e) => { setPrenomReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Nom:</h2>
-                  <input type='text' onChange={(e) => { setNomReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Date de Naissance:</h2>
-                  <input type='date' onChange={(e) => { setDateNaissanceReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div> */}
-
-                {/* <h1>{registerStatus}</h1> */}
-
 
                 <div className="cadre-low">
                   <div className="check-mdp">
@@ -152,9 +125,7 @@ function App_Register() {
                     <label for="mdp-memorise">Mémoriser mot de passe </label>
                   </div>
 
-                  <button className="btn_connection register" onClick={register}>S'inscrire</button>
-
-                  {/* <button className="register" onClick={register}>S'inscrire</button> */}
+                  <button className="btn_connection register" onClick={inscription()}>S'inscrire</button>
 
                     <div class="text-center">
                         <span class="txt1"> Vous avez deja un compte ? </span>
