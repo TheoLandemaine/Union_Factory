@@ -22,6 +22,30 @@ function Recherche() {
         setSearchTerm(value);
     }
 
+function changeHeart(e) {
+
+    let actualHeart = e.target.parentNode.parentNode;
+    // let card = e.target.parentNode.parentNode.parentNode.parentNode;
+
+    if(actualHeart.classList.contains('heart-filled')) {
+        let otherHeart = actualHeart.parentNode.childNodes[4]
+        // console.log('heart-filled');
+        // console.log(actualHeart);
+        // console.log(otherHeart);
+        otherHeart.classList.remove('hidden');
+        actualHeart.classList.add('hidden');
+
+    } else {
+        let actualHeart = e.target.parentNode;
+        let otherHeart = actualHeart.parentNode.childNodes[3]
+        // console.log('heart-unfilled');
+        // console.log(actualHeart);
+        // console.log(otherHeart);
+        otherHeart.classList.remove('hidden');
+        actualHeart.classList.add('hidden');
+    }
+}
+
     // console.log(searchTerm);
     return (
         <>
@@ -51,8 +75,8 @@ function Recherche() {
                                     <a className="inc button" href={association.a_lien} target="_blank" rel="noreferrer">
                                         Cliquez pour visiter
                                     </a>
-                                    <i className="heart-filled"><AiFillHeart/></i>
-                                    <i className="heart-unfilled" hidden><AiOutlineHeart/></i>
+                                    <i className="heart-filled hidden " onClick ={(e)=> changeHeart(e) }><AiFillHeart/></i>
+                                    <i className="heart-unfilled " onClick ={(e)=> changeHeart(e) }><AiOutlineHeart/></i>
                                 </div>
                             </div>
                         );
