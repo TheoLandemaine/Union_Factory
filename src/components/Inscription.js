@@ -4,8 +4,11 @@ import '../App.css';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import  { useHistory } from 'react-router-dom';
+import {FaUserCircle} from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 
+toast.configure()
 function Inscription() {
 
   let history = useHistory();
@@ -47,62 +50,101 @@ function Inscription() {
   }
   return (
     <>
-      <div className="App">
-        <h1>UNION FACTORY</h1>
+     <div className="App">
 
         <div className="profilBody">
-          <div className="connect-vous">
-            <h1 id="connect">Connectez-vous</h1>
-          </div>
-          <section className="container">
-            <div className="cadre">
-              <div>
-              </div>
+            <section className="container">
+                <div className="cadreInscription">
+            <div>
+            <FaUserCircle id="ConnectionLogo"/>
+        </div>
+ 
 
-              <div className='mail'>
+      <div className='mail'>
 
-                <div className="insert-username">
-                  <h2>Username:</h2>
-                  <input type='text' onChange={(e) => { setUsernameReg(e.target.value); } } placeholder="entrer votre username" required />
+        <div className="insert-username">
+            <div className="text-input-container">
+                <input className="text-input" type="text" onChange={(e) => { setUsernameReg(e.target.value); } }
+                        placeholder=" " id="InputAdresseMail" required/>
+                <div className="input-underline"></div>
+                <div className="label-container">
+                    <span className="input-label">Username :</span>
                 </div>
-                <div className="insert-mail">
-                  <h2>Adresse-mail:</h2>
-                  <input type='email' onChange={(e) => { setEmailReg(e.target.value); } } placeholder="entrer votre E-mail" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Mot de passe:</h2>
-                  <input type='password' onChange={(e) => { setPasswordReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Prenom:</h2>
-                  <input type='text' onChange={(e) => { setPrenomReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Nom:</h2>
-                  <input type='text' onChange={(e) => { setNomReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-                <div className='mdp'>
-                  <h2>Date de Naissance:</h2>
-                  <input type='date' onChange={(e) => { setDateNaissanceReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
-                </div>
-
-
-                <div className="cadre-low">
-                  <div className="check-mdp">
-                    <input type='checkbox' className="mdp-memorise"></input>
-                    <label for="mdp-memorise">Mémoriser mot de passe </label>
-                  </div>
-
-                  <button className="inscription" onClick={()=>{inscription(); history.push('/home')}}>S'inscrire</button>
-
-                  <label id="text-sign-up">Vous avez deja un compte?</label>
-                  <a href="/profil">Connectez Vous</a>
-                </div>
-              </div>
             </div>
-          </section>
+        </div>
+
+            <div className="insert-mail">
+                <div className="text-input-container">
+                    <input className="text-input" type="text" onChange={(e) => { setEmailReg(e.target.value); } }
+                            placeholder=" " id="InputAdresseMail" required/>
+                    <div className="input-underline"></div>
+                    <div className="label-container">
+                        <span className="input-label">Adresse-mail :</span>
+                    </div>
+                </div>
+            </div>
+            <div className="mdp">
+                <div className="text-input-container">
+                    <input className="text-input" type="text" onChange={(e) => { setPasswordReg(e.target.value); } }
+                            placeholder=" " id="InputAdresseMail" required/>
+                    <div className="input-underline"></div>
+                    <div className="label-container">
+                        <span className="input-label">Mot de passe:</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mdp">
+                <div className="text-input-container">
+                    <input className="text-input" type="text" onChange={(e) => { setPrenomReg(e.target.value); } }
+                            placeholder=" " id="InputAdresseMail" required/>
+                    <div className="input-underline"></div>
+                    <div className="label-container">
+                        <span className="input-label">Prénom :</span>
+                    </div>
+                </div>
+            </div>
+            <div className="mdp">
+                <div className="text-input-container">
+                    <input className="text-input" type="text" onChange={(e) => { setNomReg(e.target.value); } } 
+                            placeholder=" " id="InputAdresseMail" required/>
+                    <div className="input-underline"></div>
+                    <div className="label-container">
+                        <span className="input-label">Nom :</span>
+                    </div>
+                </div>
+            </div>
+
+        <div className='mdp'>
+          <h2>Date de Naissance:</h2>
+          <input type='date' onChange={(e) => { setDateNaissanceReg(e.target.value); } } placeholder="entrer votre mot de passe" required />
+        </div>
+
+
+        <div className="cadre-low">
+          <div className="check-mdp">
+            <input type='checkbox' className="mdp-memorise"></input>
+            <label for="mdp-memorise">Mémoriser mot de passe </label>
+          </div>
+
+          <button className="inscription btn_connection" onClick={()=>{inscription(); history.push('/home')}}>S'inscrire</button>
+
+            <div className="text-center">
+                <span className="txt1"> Vous avez deja un compte ? </span>
+
+                <Link to="/Profil">
+                    <h2 className="txt2"> Connectez Vous </h2>
+                </Link>
+            </div>
+
+          {/* <label id="text-sign-up">Vous avez deja un compte?</label>
+          <a href="./App_Login.js">Connectez Vous</a> */}
         </div>
       </div>
+    </div>
+  </section>
+</div>
+</div>
       </>
   );
 }

@@ -61,6 +61,21 @@ PAGE D'ACCUEIL
   font-size: 25px;
   top: 30%;
   left: 36%;
+  animation: show 2s ease-in;
+  transition: all 2s;
+}
+
+@keyframes show{
+  from{
+    opacity: 0;
+                }
+  to{
+    opacity: 1;
+                }
+}
+
+.PhraseAccueil:hover, .PhraseAccueil:focus{
+  transform: scale(1.2);
 }
 
 #bouton{
@@ -140,6 +155,32 @@ PAGE DE CONNECTION
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 40%);
 }
 
+.cadreInscription{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 40%;
+  margin: 50px;
+  border-radius:15px;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 40%);
+}
+
+.cadreLogout{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 40%;
+  margin: 50px;
+  border-radius:15px;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 40%);
+}
+
+.formLogout {
+  margin: 30px;
+}
+
 #ConnectionLogo{
   font-size: 150px;
   margin: 15px;
@@ -216,9 +257,14 @@ input.cadre{
   text-decoration: underline;
 }
 
-.div_AdresseMail, .mdp, .btn_connection, .text_inscription {
+.div_AdresseMail, .mdp, .btn_connection, .text_inscription, .insert-username, .insert-mail {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.divise_form {
+  /* display: flex; */
+  flex-direction: row;
 }
 
 .text_inscription {
@@ -288,7 +334,7 @@ a {
   width: 100%;
   position: absolute;
   bottom: 0;
-  
+  left: 0;
   outline: none;
   border: none;
   padding-bottom: 4px; /* Better-looking line spacing */
@@ -320,6 +366,7 @@ a {
 
   position: absolute;
   bottom: 5px;
+  left: 0;
   transform: none; /* Normal state */
   transition: all var(--animation-duration) ease;
 }

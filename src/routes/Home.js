@@ -40,12 +40,16 @@ function Home() {
 
   return (
       <div className="App">
-          <h1>Hello {loginStatus || localStorage.getItem("name")}</h1>
-          <img src ={localStorage.getItem("profilePic")}/>
-          <form action="/logout" method="GET">
-            <button onClick = {() => {logout(); history.push('/profil')}}>Logout</button>
-            
-          </form>
+          <section className="container">
+              <div className="cadreLogout">
+                  <h1>Hello {loginStatus || localStorage.getItem("name")}</h1>
+                  <img src ={localStorage.getItem("profilePic")}/>
+                  <form className="formLogout" action="/logout" method="GET">
+                    <button className="btn_connection" onClick = {() => {logout(); history.push('/profil')}}>Logout</button>
+                    
+                  </form>
+              </div>
+          </section>
       </div>
   );
 }
