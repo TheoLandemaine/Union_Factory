@@ -103,7 +103,7 @@ form{
 } 
 
 .logoContact {
-    position: absolute;
+    position: relative;
     align-items: center;
     justify-content: center;
     width: 35px;
@@ -121,17 +121,17 @@ form{
 }
 
 #logoNom {
-    top: 268px;
-    left: 636px;
+    top: 40px;
+    left: -84px;
 }
 
 #logoEmail {
-    top: 268px;
-    left: 1136px;
+    top: 40px;
+    left: -34px;
 }
 
 #logoSujet {
-    top: 348px;
-    left: 1136px;
+    top: 40px;
+    left: -33px;
 }
 

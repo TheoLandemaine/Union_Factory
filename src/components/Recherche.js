@@ -91,14 +91,15 @@ function Recherche() {
     // console.log(searchTerm);
     return (
         <>
+
             <div className="searchBar" id="barSearch">
+                <i><FaSearch /></i>
                 <input type="text"
                        name="searchBar"
                        id="searchBar"
                        placeholder="Rechercher une association"
                        onChange={handleSearchTerm}
                 />
-                <i><FaSearch /></i>
             </div>
             <h1>Hello {loginStatus}</h1>
             <div className="container">
