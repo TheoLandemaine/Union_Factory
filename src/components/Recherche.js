@@ -25,9 +25,11 @@ function Recherche() {
 function changeHeart(e) {
 
     let actualHeart = e.target.parentNode.parentNode;
-    // let card = e.target.parentNode.parentNode.parentNode.parentNode;
+    let card = e.target.parentNode.parentNode.parentNode.parentNode;
 
     if(actualHeart.classList.contains('heart-filled')) {
+        console.log(card, "  card1  ");
+        console.log(card.id);
         let otherHeart = actualHeart.parentNode.childNodes[4]
         // console.log('heart-filled');
         // console.log(actualHeart);
@@ -36,6 +38,10 @@ function changeHeart(e) {
         actualHeart.classList.add('hidden');
 
     } else {
+        let card = e.target.parentNode.parentNode.parentNode;
+        console.log(card, "  card2  ");
+        console.log(card.id);
+
         let actualHeart = e.target.parentNode;
         let otherHeart = actualHeart.parentNode.childNodes[3]
         // console.log('heart-unfilled');
