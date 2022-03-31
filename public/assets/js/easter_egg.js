@@ -440,7 +440,7 @@ document.addEventListener( 'keypress', function( event ) {
     if( word.length > 2 ) {
         
         if( word.includes( 'fin' ) ) {
-            document.location.href = "./";
+            document.location.href = "./animalier";
             word = '';
         } 
     }
