@@ -269,6 +269,36 @@ app.post('/fav/delete', (req, res) => {
     }
 })
 
+
+app.get("/api/get/fav", (req,res)=>{
+    if(req.session.user){
+        const user_id = req.session.user[0].id;
+        db.query("SELECT * FROM `association` as A,`favorites` as F  WHERE A.a_assoID = F.id_card AND F.user_id = ?",[user_id], (err,result)=>{
+            if(err) {
+                console.log(err)
+            }
+            res.send(result)
+            // console.log(result)
+        });
+        console.log('premier')
+        console.log(req.session.user)
+
+    }
+    else{
+        // db.query("SELECT * FROM `association` as A,`favorites` as F  WHERE A.a_assoID = F.id_card AND F.user_id = 76", (err,result)=>{
+        //     if(err) {
+        //         console.log(err)
+        //     }
+        //     res.send(result)
+        //     // console.log(result)
+        // });
+        // console.log('deuxiemme')
+        // console.log(req.session.user)
+        res.send({message: "You are not logged in"})
+    }
+
+});
+
 // ************************************************************************************************
 // ************************************************************************************************
 // ************************************************************************************************
