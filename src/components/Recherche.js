@@ -2,14 +2,27 @@ import React from 'react';
 import {useState , useEffect} from 'react';
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
+import Axios from 'axios';
 
 import "../css/cards.css";
 import Footer from "./Footer";
 
 function Recherche() {
 
+    // GET USER NAME FROM BACKEND
+    const [loginStatus, setLoginStatus] = useState('')
+
+    useEffect(() =>{
+        Axios.get("http://localhost:3003/login").then((response) =>{
+          if (response.data.loggedIn === true) {
+            setLoginStatus(response.data.user[0].username);
+          }
+        })
+    }, [])
+
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState([]);
+    Axios.defaults.withCredentials = true;
 
     useEffect(() => {
         fetch('http://localhost:3003/api/get')
@@ -22,34 +35,57 @@ function Recherche() {
         setSearchTerm(value);
     }
 
-function changeHeart(e) {
+
+    const insertCard = (id) => {
+        Axios.post("http://localhost:3003/fav/insert", {
+            card_id: id
+        }).then((response) => {
+            console.log(response.data);
+        })
+    }
+
+    const deleteCard = (id) => {
+        Axios.post("http://localhost:3003/fav/delete", {
+            card_id: id
+        }).then((response) => {
+            console.log(response.data);
+        })
+    }
+
+
+
+
+
+
+    function changeHeart(e){
 
     let actualHeart = e.target.parentNode.parentNode;
     let card = e.target.parentNode.parentNode.parentNode.parentNode;
-
+    let cardid = card.getAttribute("id");
+    
     if(actualHeart.classList.contains('heart-filled')) {
-        console.log(card, "  card1  ");
-        console.log(card.id);
         let otherHeart = actualHeart.parentNode.childNodes[4]
-        // console.log('heart-filled');
-        // console.log(actualHeart);
-        // console.log(otherHeart);
+
         otherHeart.classList.remove('hidden');
         actualHeart.classList.add('hidden');
 
+        console.log("Card deleted from favorites || Card id: ",cardid) 
+        deleteCard(cardid);
     } else {
         let card = e.target.parentNode.parentNode.parentNode;
-        console.log(card, "  card2  ");
-        console.log(card.id);
+        let cardid = card.getAttribute("id");
 
         let actualHeart = e.target.parentNode;
         let otherHeart = actualHeart.parentNode.childNodes[3]
-        // console.log('heart-unfilled');
-        // console.log(actualHeart);
-        // console.log(otherHeart);
+
         otherHeart.classList.remove('hidden');
         actualHeart.classList.add('hidden');
+
+        console.log("Card added to favorites || Card id: ",cardid);
+        insertCard(cardid);
     }
+
+
 }
 
     // console.log(searchTerm);
@@ -64,6 +100,7 @@ function changeHeart(e) {
                 />
                 <i><FaSearch /></i>
             </div>
+            <h1>Hello {loginStatus}</h1>
             <div className="container">
                 <div className="cards-container">
                     {data.filter((association)=>{
@@ -71,7 +108,7 @@ function changeHeart(e) {
                     }).map(association => {
                         // console.log(association.a_titre);
                         return (
-                            <div className="card" key={association.a_assoID} id={association.a_assoID}>
+                            <div label = "card_id" className="card" key={association.a_assoID} id={association.a_assoID}>
                                 <div className="card-image">
                                     <img src={association.a_image} alt="association"/>
                                 </div>

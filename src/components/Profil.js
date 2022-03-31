@@ -66,35 +66,35 @@ function Profil() {
                     <div className='mail'>
                         
                         <div className="div_AdresseMail">
-                            <div class="text-input-container">
-                                <input class="text-input" type="text"onChange={(e) => { setEmail(e.target.value);}} 
+                            <div className="text-input-container">
+                                <input className="text-input" type="text"onChange={(e) => { setEmail(e.target.value);}} 
                                         placeholder=" " id="InputAdresseMail" required/>
-                                <div class="input-underline"></div>
-                                <div class="label-container">
-                                    <span class="input-label">Adresse-mail :</span>
+                                <div className="input-underline"></div>
+                                <div className="label-container">
+                                    <span className="input-label">Adresse-mail :</span>
                                 </div>
                             </div>
                         </div>
 
                         <div className="mdp">
-                            <div class="text-input-container">
-                                <input class="text-input" type="password" onChange={(e) => { setPassword(e.target.value);}}
+                            <div className="text-input-container">
+                                <input className="text-input" type="password" onChange={(e) => { setPassword(e.target.value);}}
                                  placeholder=" " id="InputAdresseMail" required/>
-                                <div class="input-underline"></div>
-                                <div class="label-container">
-                                    <span class="input-label">Mot de passe :</span>
+                                <div className="input-underline"></div>
+                                <div className="label-container">
+                                    <span className="input-label">Mot de passe :</span>
                                 </div>
                             </div>
                         </div>
 
                         <button className="btn_connection" onClick={()=>{ login(); history.push('/home')}}>Se connecter</button>
 
-                        <div class="text-center">
-                            <span class="txt1"> Vous n'avez pas de compte ? </span>
+                        <div className="text-center">
+                            <span className="txt1"> Vous n'avez pas de compte ? </span>
                             <h1>{loginStatus}</h1>
 
                             <Link to="/Inscription">
-                                <a class="txt2" href="#"> S'inscire ici </a>
+                                <a className="txt2" href="#"> S'inscire ici </a>
                             </Link>
                         </div>
                     </div>

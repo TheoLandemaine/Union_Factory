@@ -29,7 +29,7 @@ app.get("/api/get", (req,res)=>{
             console.log(err)
         }
         res.send(result)
-        console.log(result)
+        // console.log(result)
     });   
 });
 
@@ -123,7 +123,7 @@ app.post('/login', (req, res)=>{
 
     db.query("SELECT * FROM login WHERE email = ?;", email, (err,result)=>{
         if(err){
-            // console.log(err);
+            console.log(err);
             res.send({err: err})
         }
         if (result.length > 0){
@@ -234,29 +234,28 @@ app.get('/fav', (req, res) => {
     }
 })
 
-app.post('/fav', (req, res) => {
-    if(req.session.user){
-        const user_id = req.session.user[0].id;
-        const id_card = req.body.id_card;
-        db.query("INSERT INTO favorites (user_id, id_card) VALUES (?, ?)", [user_id, id_card], (err, result) => {
-            if(err) throw err;
-            if(err){
-                res.send({err: err})
-            }
-            if (result.length > 0){
-                res.send(result);
-            }
-        })
-    }else{
-        res.send({message: "You are not logged in"})
-    }
+
+// insert card into favorites with Axios
+app.post('/fav/insert', (req, res) => {
+    const user_id = req.session.user[0].id;
+    const card_id = req.body.card_id;
+
+    db.query("INSERT INTO favorites (user_id, id_card) VALUES (?,?)", [user_id, card_id], (err, result) => {
+        if(err) throw err;
+        if(err){
+            res.send({err: err})
+        }
+        if (result.length > 0){
+            res.send(result);
+        }
+    })
 })
 
-app.delete('/fav', (req, res) => {
+app.delete('/fav/delete', (req, res) => {
     if(req.session.user){
         const user_id = req.session.user[0].id;
-        const id_card = req.body.id_card;
-        db.query("DELETE FROM favorites WHERE user_id = ? AND id_card = ?", [user_id, id_card], (err, result) => {
+        const card_id = req.body.id_card;
+        db.query("DELETE FROM favorites WHERE user_id = ? AND id_card = ?", [user_id, card_id], (err, result) => {
             if(err) throw err;
             if(err){
                 res.send({err: err})
