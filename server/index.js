@@ -251,11 +251,11 @@ app.post('/fav/insert', (req, res) => {
     })
 })
 
-app.delete('/fav/delete', (req, res) => {
+app.post('/fav/delete', (req, res) => {
     if(req.session.user){
         const user_id = req.session.user[0].id;
-        const card_id = req.body.id_card;
-        db.query("DELETE FROM favorites WHERE user_id = ? AND id_card = ?", [user_id, card_id], (err, result) => {
+        const card_id = req.body.card_id;
+        db.query("DELETE FROM favorites WHERE user_id = ? AND id_card = ?", [user_id,card_id], (err, result) => {
             if(err) throw err;
             if(err){
                 res.send({err: err})
