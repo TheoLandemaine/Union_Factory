@@ -33,6 +33,29 @@ function Favoris (){
     console.log('loginStatus',loginStatus)
     console.log('data',data);
 
+    const deleteCard = (id) => {
+        Axios.post("http://localhost:3003/fav/delete", {
+            card_id: id
+        }).then((response) => {
+            console.log(response.data);
+        })
+    }
+
+
+    function changeHeart(e) {
+
+        let actualHeart = e.target.parentNode.parentNode;
+        let card = e.target.parentNode.parentNode.parentNode.parentNode;
+        let cardid = card.getAttribute("id");
+        console.log(actualHeart);
+        console.log(card);
+        console.log(cardid);
+        console.log("Card deleted from favorites || Card id: ", cardid)
+        deleteCard(cardid);
+
+    }
+
+
     try {
         return(
             <>
@@ -56,8 +79,8 @@ function Favoris (){
                                         <a className="inc button" href={association.a_lien} target="_blank" rel="noreferrer">
                                             Cliquez pour visiter
                                         </a>
-                                        <i className="heart-filled hidden "><AiFillHeart/></i>
-                                        <i className="heart-unfilled " ><AiOutlineHeart/></i>
+                                        <i className="heart-filled  " onClick ={(e)=> changeHeart(e)}><AiFillHeart/></i>
+                                        {/*<i className="heart-unfilled " ><AiOutlineHeart/></i>*/}
                                     </div>
                                 </div>
                             );
@@ -79,8 +102,10 @@ function Favoris (){
                 <div className="nomPage">
                     <h1 id="Favoris">Favoris </h1>
                 </div>
-                <div className="container">
-                    <h1>Vous devez vous connectez</h1>
+                <div className="containerFavoris">
+                    <div className="errorFavoris">
+                        <h1>Vous devez vous connectez</h1>
+                    </div>
                 </div>
             </>
         )
