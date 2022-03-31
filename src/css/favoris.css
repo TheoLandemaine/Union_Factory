@@ -21,3 +21,26 @@
 #Favoris:hover {
     transform: scale(1.15);
 }
+
+.containerFavoris{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    padding: 7px;
+}
+
+.errorFavoris {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 20px;
+    transition: 0.5s ease;
+    padding: 7px;
+}
