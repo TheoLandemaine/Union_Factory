@@ -107,6 +107,7 @@ function Favoris (){
                         <h1>Vous devez vous connectez</h1>
                     </div>
                 </div>
+                {/*<Footer />*/}
             </>
         )
     }
