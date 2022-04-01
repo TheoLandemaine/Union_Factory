@@ -62,7 +62,7 @@ function Favoris (){
                 <div className="nomPage">
                     <h1 id="Favoris">Favoris </h1>
                 </div>
-                <h1>Hello {loginStatus}</h1>
+                {/*<h1>Hello {loginStatus}</h1>*/}
 
                 <div className="container">
                     <div className="cards-container">

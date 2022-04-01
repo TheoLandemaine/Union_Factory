@@ -101,7 +101,7 @@ function Recherche() {
                        onChange={handleSearchTerm}
                 />
             </div>
-            <h1>Hello {loginStatus}</h1>
+            {/*<h1>Hello {loginStatus}</h1>*/}
             <div className="container">
                 <div className="cards-container">
                     {data.filter((association)=>{
